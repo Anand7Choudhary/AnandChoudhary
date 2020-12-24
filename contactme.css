@@ -1,0 +1,232 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+  background-color: rgb(205, 209, 168);
+  background-size: cover;
+}
+
+.headd {
+  width:100vw;
+  height:15vh;  
+  z-index: -1;
+  position: relative;
+}
+.headd img{
+  width:100%;
+  height:100%;
+}
+.headd p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(75, 94, 122);
+  font-size:5vw;
+  padding-left: 5vw;
+  padding-top: 2vh;
+  text-align: center;
+}
+                                                    /*End of header*/
+                                                    /*Contact section*/
+.contactmesite {
+  margin-left: 7vw;
+  margin-top: 8vh;
+  padding-left: 1vw;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  background-color: rgb(245, 245, 247);
+  width: 50vw;
+  height: 65vh;
+  position: absolute;
+  z-index: -1;
+  border-radius: 25px;
+  outline-style: none;
+  box-shadow:3px 6px 10px rgb(66, 66, 66),-2px 0px 15px rgb(0, 0, 0);
+  animation: fadein_1 ease-in-out 1.5s;
+}
+input {
+  margin-right: 2vw;
+  color: rgb(7, 7, 7);
+  outline-style: none;
+  padding-left: 2%;
+  padding-top: 1%;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 2px;
+  border-color: darkblue;
+}
+textarea {
+  width:35vw;
+  height:15vh;
+  margin-right: 10vw;
+  color: rgb(7, 7, 7);
+  outline-style: none;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  padding-top: 1vh;
+  border-width: 2px;
+  border-color: darkblue;
+  border-radius: 25px;
+  outline-style: none;
+}
+::placeholder {
+  color: rgb(0, 0, 0);
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+h4 {
+  color: rgb(2, 2, 2);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 0%;
+  font-size:small;
+}
+button {
+  color: white;
+  background-color: red;
+  outline-style: none;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+}
+.email_box {
+  width: 200px;
+  overflow: scroll;
+}
+.map {
+  width: 28vw;
+  height: 77vh;
+  background-color: rgb(49, 116, 11);
+  z-index: 1;
+  margin-top: 5vh;
+  margin-left: 55vw;
+  position: absolute;
+  border-radius: 25px;
+  outline-style: none;
+  box-shadow: 3px 6px 10px rgb(66, 66, 66),-6px 0px 10px rgb(68, 68, 68);
+  animation: fadein_1 ease-in-out 1.5s;
+}
+@keyframes fadein_1{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+.map img {
+  width: 20vw;
+  height: 20vh;
+  padding-left: 3vw;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  transition: transform 0.5s;
+  animation:fadein ease-in-out 3s;
+}
+@keyframes fadein{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.map img:hover {
+  transform: scale(1.5);
+}
+.map p {
+  text-align: center;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2vw;
+  font-weight: bolder;
+}
+
+                                                        /*hamburgermenu*/
+
+#menu {
+  width: 35px;
+  height: 30px;
+  margin: 5vh 2vw;
+  cursor: pointer;
+}
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: #b81568;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+#bar1 {
+  transform: translateY(-4px);
+}
+#bar3 {
+  transform: translateY(4px);
+}
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.nav li a h5 {
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  font-size: 2vw;
+}
+.nav li a h5:hover {
+  transform: scale(1.5);
+  color: black;
+  background-color:rgba(0,0,0,0.3);
+}
+.nav li {
+  list-style: none;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  margin-right: 2.5vw;
+}
+.nav {
+  padding: 0;
+  margin: 0;
+  display: none;
+  text-align: center;
+  position: relative;
+}
+.menu-bg,
+#menu-bar {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.menu-bg {
+  z-index: 5;
+  width: 15vw;
+  height: 100vh;
+  margin: 0;
+  background-color: hotpink;
+  transition: 0.3s ease;
+  display: none;
+}
+#menu-bar {
+  z-index: 9;
+  display: inline;
+}
+.change-bg {
+  display: block;
+}
+.change .bar {
+  background-color: white;
+}
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3 {
+  transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2 {
+  opacity: 0;
+}
+.change {
+  display: block;
+}
+
+                                                        /*end of hamburger*/

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="contactme.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anand Choudhary | Contact Me</title>
+  </head>
+
+  <body>
+    <div class="headd">
+      <img alt="header logo" src="C:\Users\admin\Desktop\MyCV\images\header_anand.png">
+    </div>
+
+    <!-- hamburger menu -->
+
+    <div id="menu-bar">
+      <div id="menu" onclick="onClickMenu()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <ul class="nav" id="nav">
+        <li>
+          <a href="index.html"><h5>Home</h5></a>
+        </li>
+        <li>
+          <a href="aboutme.html"><h5>About Me</h5></a>
+        </li>
+        <li>
+          <a href="followme.html"><h5>Follow Me</h5></a>
+        </li>
+        <li>
+          <a href="contactme.html"><h5>Contact Me</h5></a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu-bg" id="menu-bg"></div>
+
+    <!-- End of Hamburger menu -->
+
+    <div class="contactmesite">
+      <form accept="" method="">
+        <input
+          type="text"
+          name="FirstName"
+          required
+          placeholder="First Name"
+          class="email_box"
+        />
+        <input
+          type="text"
+          name="LastName"
+          required
+          placeholder="Last Name"
+          class="email_box"
+        />
+        <br /><br />
+        <input type="date" name="DOB" required placeholder="Date: DD/MM/YYYY" />
+        <h4>
+          <label><br>Gender : </label> Male<input
+            type="radio"
+            name="gender"
+            value="Male"
+            required
+          />
+          Female<input type="radio" name="gender" value="female" required />
+        </h4>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Email"
+          class="email_box"
+        />
+        <br /><br /><br />
+        <textarea
+          name="comment"
+          placeholder="Enter your comment here..."
+          required
+        ></textarea>
+        <button type="submit" value="">Submit</button>
+      </form>
+    </div>
+    <div class="map">
+      <img alt="404" src="C:\Users\admin\Desktop\MyCV\images\map.png">
+      <p>
+        #89 1<sup>st</sup>floor 5<sup>th</sup>B main road,<br />
+        2<sup>nd</sup>block R.T.Nagar,<br />Bangaloere - 560032
+      </p>
+    </div>
+
+    
+    
+    
+    <script src="p1.js" async></script>
+
+
+  </body>
+</html>
