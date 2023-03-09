@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Comfortaa:wght@500&family=Oswald:wght@500&family=Roboto:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Caveat',cursive; */
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Roboto',sans-serif; */
+    /* font-family: 'Oswald',sans-serif; */
+}
+
+body {
+    background-color: #151515;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 100;
+    overflow: hidden;
+    animation: bg 5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 150px;
+    cursor: context-menu;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Comfortaa', cursive;
+    z-index: 11;
+}
+
+.loading-screen .loadingTitle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.loading-screen .loadingTitle .lord-icon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: -40px;
+}
+
+.dropping-texts {
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+    height: 36px;
+    vertical-align: -2px;
+}
+
+.dropping-texts>div {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    position: absolute;
+    font-weight: 300;
+    box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
+}
+
+.dropping-texts>div:nth-child(1) {
+    animation: roll 5s linear infinite 0s;
+}
+
+.dropping-texts>div:nth-child(2) {
+    animation: roll 5s linear infinite 1s;
+}
+
+.dropping-texts>div:nth-child(3) {
+    animation: roll 5s linear infinite 2s;
+}
+
+.dropping-texts>div:nth-child(4) {
+    animation: roll2 5s linear infinite 3s;
+}
+
+@media screen and (max-width:550px) {
+    .loading-screen .loadingTitle {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .loading-screen .loadingTitle {
+        font-size: 46px;
+    }
+
+    .loading-screen .loadingTitle .lord-icon {
+        left: 0;
+        bottom: 0;
+    }
+
+    .dropping-texts {
+        font-size: 42px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        height: fit-content;
+        vertical-align: -2px;
+    }
+
+    .dropping-texts>div {
+        margin-left: 0;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .loading-screen .loadingTitle {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .loading-screen .loadingTitle {
+        font-size: 12vw;
+    }
+
+    .loading-screen .loadingTitle .lord-icon {
+        left: 0;
+        bottom: 0;
+    }
+
+    .dropping-texts {
+        font-size: 10vw;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        height: fit-content;
+        vertical-align: -2px;
+    }
+
+    .dropping-texts>div {
+        margin-left: 0;
+        box-shadow: none;
+    }
+}
+
+@keyframes roll {
+    0% {
+        font-size: 0px;
+        opacity: 0;
+        margin-left: -30px;
+        margin-top: 0px;
+        transform: rotate(-25deg);
+    }
+
+    3% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    5% {
+        font-size: inherit;
+        opacity: 1;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    20% {
+        font-size: inherit;
+        opacity: 1;
+        margin-left: 0px;
+        margin-top: 0px;
+        transform: rotate(0deg);
+    }
+
+    27% {
+        font-size: 0px;
+        opacity: 0.5;
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+
+    100% {
+        font-size: 0px;
+        opacity: 0;
+        margin-left: -30px;
+        margin-top: 0px;
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes roll2 {
+    0% {
+        font-size: 0px;
+        opacity: 0;
+        margin-left: -30px;
+        margin-top: 0px;
+        transform: rotate(-25deg);
+    }
+
+    3% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    5% {
+        font-size: inherit;
+        opacity: 1;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    30% {
+        font-size: inherit;
+        opacity: 1;
+        margin-left: 0px;
+        margin-top: 0px;
+        transform: rotate(0deg);
+    }
+
+    37% {
+        font-size: 1500px;
+        opacity: 0;
+        margin-left: -1000px;
+        margin-top: -800px;
+    }
+
+    100% {
+        font-size: 0px;
+        opacity: 0;
+        margin-left: -30px;
+        margin-top: 0px;
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes bg {
+    0% {
+        background: #600600;
+    }
+
+    3% {
+        background: #0008ff;
+    }
+
+    20% {
+        background: #0094ff;
+    }
+
+    23% {
+        background: #b200ff;
+    }
+
+    40% {
+        background: #fb00ff;
+    }
+
+    43% {
+        background: #407800;
+    }
+
+    60% {
+        background: #3e7400;
+    }
+
+    63% {
+        background: #F44336;
+    }
+
+    80% {
+        background: #F44336;
+    }
+
+    83% {
+        background: #a30b00;
+    }
+
+    100% {
+        background: #600600;
+    }
+}

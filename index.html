@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/f72c18304b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style/main.css" />
+  <title>Anand Choudhary</title>
+</head>
+
+<body>
+  <div id="body" class="body">
+    <div class="myName">
+      <div class="helloTitle">
+        <span class="nameLetters">H</span><span class="nameLetters">I</span><span class="nameLetters">,</span>
+      </div>
+      <div class="firstName" style="display: flex; gap: 30px">
+        <div class="imTitel">
+          <span class="nameLetters">I</span><span class="nameLetters">'</span><span class="nameLetters">m </span>
+        </div>
+        <div class="anandTitle" id="anandTitle">
+          <span class="nameLetters">A</span><span class="nameLetters">n</span>
+          <span class="nameLetters">a</span><span class="nameLetters">n</span>
+          <span class="nameLetters">d</span><br />
+        </div>
+      </div>
+      <div class="lastName">
+        <div class="choudharyTitle">
+          <span class="nameLetters">C</span><span class="nameLetters">h</span><span class="nameLetters">o</span><span
+            class="nameLetters">u</span><span class="nameLetters">d</span><span class="nameLetters">h</span><span
+            class="nameLetters">a</span><span class="nameLetters">r</span><span class="nameLetters">y</span></span>
+        </div>
+        <div class="backgroundImages">
+          <div class="nextIcon">
+            <a href="home.html" class="material-symbols-outlined">
+              <i class="fa-solid fa-arrow-right-long fa-shake"
+                style="--fa-animation-duration:2000ms;--fa-animation-timing:ease-in-out;--fa-animation-delay:1000ms"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <noscript>Oops!! Why is your Javascript disabled?</noscript>
+  <script>
+    if (document.getElementById('body')) {
+      sessionStorage.removeItem("showLoader");
+    }
+    let nameLetter = document.querySelectorAll(".nameLetters");
+    nameLetter.forEach(letter => {
+      letter.addEventListener('mouseover', function () {
+        let animationName=window.getComputedStyle(letter).getPropertyValue("animation-name");
+        if(animationName!="rubberBand"){
+          letter.style.animationName="rubberBand";
+        }
+      });
+      letter.addEventListener('animationend', function() {
+      letter.style.animationName = "none";
+      });
+    });
+  </script>
+</body>
+
+</html>

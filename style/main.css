@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Comfortaa:wght@500&family=Oswald:wght@500&family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Caveat',cursive; */
+    /* font-family: 'Comfortaa',cursive; */
+    /* font-family: 'Oswald',sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #151515;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#body {
+    background-color: #00001a;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.myName {
+    z-index: 2;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+}
+
+.myName .helloTitle {
+    align-self: flex-start;
+}
+
+.myName .firstName {
+    align-self: flex-start;
+}
+
+.anandTitle {
+    padding: 10px 15px;
+    border-radius: 10px;
+    transform: skewY(-5px);
+}
+
+.myName .lastName {
+    width: 100%;
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.myName .lastName .backgroundImages {
+    position: relative;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.myName .lastName .backgroundImages .nextIcon .material-symbols-outlined {
+    width: 150px;
+    color: white;
+    background-color: rgb(82, 163, 255);
+    border-radius: 10px;
+    font-size: 64px;
+    position: relative;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: all 0.15s ease-in;
+}
+
+.myName .lastName .backgroundImages .nextIcon .material-symbols-outlined:hover {
+    background-color: rgb(0, 119, 255);
+}
+
+.myName .nameLetters {
+    cursor: pointer;
+    font-size: 6rem;
+    letter-spacing: 10px;
+    color: #ececec;
+    /* color: #ffffff; */
+    font-weight: 600;
+    display: inline-block;
+    animation:0.75s linear;
+    animation-name: none;
+    transform-origin: center;
+    animation-play-state:running;
+}
+
+.myName .anandTitle .nameLetters {
+    background-image: url(/image/anandBg.webp);
+    background-size: cover;
+    color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.myName .firstName .imTitel .nameLetters {
+    color: transparent;
+    -webkit-text-stroke: 2px #ececec;
+}
+.myName .firstName .imTitel {
+    opacity: 0;
+    animation: zoomIn 1s forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* .nameLetters:nth-child(n):hover{
+    animation:0.75s forwards;
+    animation-name: none;
+    transform-origin: center;
+    animation-play-state:running;
+} */
+@keyframes rubberBand {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@media screen and (max-width:1210px) {
+    .myName .nameLetters {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .myName .nameLetters {
+        font-size: 8vw;
+    }
+
+    .myName .lastName .backgroundImages {
+        height: 100%;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .myName {
+        gap: 15px;
+    }
+
+    .myName .nameLetters {
+        font-size: 9vw;
+    }
+
+    .myName .lastName {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .myName .lastName .backgroundImages {
+        height: 100%;
+        margin-bottom: 0;
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .myName {
+        gap: 15px;
+    }
+
+    .myName .nameLetters {
+        font-size: 8vw;
+    }
+
+    .myName .lastName {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .myName .lastName .backgroundImages {
+        height: 100%;
+        margin-bottom: 0;
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .myName {
+        gap: 15px;
+        left: 60%;
+        width: 100%;
+    }
+
+    .myName .nameLetters {
+        font-size: 10vw;
+    }
+
+    .myName .firstName {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myName .firstName .anandTitle {
+        padding: 0;
+    }
+
+    .myName .lastName {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .myName .lastName .backgroundImages {
+        height: 100%;
+        margin-bottom: 0;
+        align-self: flex-start;
+    }
+
+    .myName .lastName .backgroundImages .nextIcon .material-symbols-outlined {
+        font-size: 8vw;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .myName {
+        gap: 15px;
+    }
+
+    .myName .nameLetters {
+        font-size: 8vw;
+    }
+
+    .myName .firstName {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myName .firstName .anandTitle {
+        padding: 0;
+    }
+
+    .myName .lastName {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .myName .lastName .backgroundImages {
+        height: 100%;
+        margin-bottom: 0;
+        align-self: flex-start;
+    }
+}
