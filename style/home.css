@@ -9,9 +9,9 @@
 }
 
 .nameLetters {
-    cursor: pointer;
+    cursor: context-menu;
     /* font-size: 5vw; */
-    /* letter-spacing: 1px; */
+    letter-spacing: 0px;
     /* color: #dbc500; */
     /* color: #ffffff; */
     font-weight: 600;
@@ -476,7 +476,7 @@
 .mainBody .aboutMeBody .aboutBg {
     position: absolute;
     top: -40px;
-    left: -50px;
+    left: 0px;
     font-size: 25vw;
     color: #303030;
     font-family: 'Oswald', sans-serif;
@@ -580,7 +580,7 @@
     width: 100%;
     min-height: 100vh;
     max-height: fit-content;
-    padding: 50px 150px 50px 50px;
+    padding: 150px 150px 50px 50px;
     display: flex;
     justify-content: space-around;
     background-color: #030014;
@@ -842,7 +842,7 @@
 
     .mainBody .aboutMeBody .aboutBg {
         left: unset;
-        right: -50px;
+        right: 0px;
     }
 
     .mainBody .aboutMeBody .imgDiv {
@@ -906,7 +906,7 @@
         position: absolute;
         /* position: relative; */
         top: -50px;
-        left: -20px;
+        left: 0px;
         /* right:100px; */
     }
 
@@ -1005,7 +1005,7 @@
 
     .mainBody .aboutMeBody .aboutBg {
         left: unset;
-        right: -30px;
+        right: 0px;
     }
 
     .mainBody .aboutMeBody .imgDiv {
@@ -1088,7 +1088,7 @@
 
     .mainBody .skillsBody .skillTitle {
         top: -30px;
-        left: -20px;
+        left: 0px;
     }
 
     .mainBody .skillsBody .skillText .someSkillTexts .infoText {
@@ -1110,8 +1110,8 @@
     }
 
     .mainBody .floatingDivs .workBg {
-        top: 30%;
-        right: -30%;
+        top: 20%;
+        right: -20%;
     }
 
     .mainBody .floatingDivs .downArrow {
@@ -1213,7 +1213,7 @@
 
     .mainBody .aboutMeBody .aboutBg {
         left: unset;
-        right: -30px;
+        right: 0px;
     }
 
     .mainBody .aboutMeBody .imgDiv {
@@ -1265,7 +1265,9 @@
         text-align: left;
         width: fit-content;
     }
-
+    .mainBody .skillsBody{
+        padding-top: 150px;
+    }
     .mainBody .skillGlobe .content1 {
         display: none;
     }
@@ -1275,8 +1277,8 @@
     }
 
     .mainBody .skillsBody .skillTitle {
-        top: 0px;
-        left: -20px;
+        top: 50px;
+        left: 0px;
     }
 
     .mainBody .skillsBody .skillText .someSkillTexts .infoText {
@@ -1305,8 +1307,8 @@
         display: flex;
     }
     .mainBody .skillsBody .skillTitle {
-        top: 10px;
-        left: -20px;
+        top: 20px;
+        left: 0px;
     }
 }
 
@@ -1328,8 +1330,8 @@
     }
 
     .mainBody .skillsBody .skillTitle {
-        top: 20px;
-        left: -20px;
+        top: 50px;
+        left: 0px;
     }
 
     .mainBody .skillsBody .skillText .someSkillTexts .infoText {
