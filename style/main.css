@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: #151515;
+    background-color: #00001a;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -228,7 +228,7 @@ body {
     }
 
     .myName .nameLetters {
-        font-size: 10vw;
+        font-size: 12vw;
     }
 
     .myName .firstName {
