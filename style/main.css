@@ -97,7 +97,7 @@ body {
 }
 
 .myName .anandTitle .nameLetters {
-    background-image: url(/image/anandBg.webp);
+    background-image: url(image/anandBg.webp);
     background-size: cover;
     color: transparent;
     background-clip: text;
