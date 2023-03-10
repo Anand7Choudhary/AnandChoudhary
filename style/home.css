@@ -162,7 +162,7 @@
 .mainBody .floatingDivs .workBg {
     position: absolute;
     top: 50%;
-    right: -30%;
+    right: -10%;
     transform: translateY(-50%);
     font-size: 40vw;
     color: #303030;
@@ -470,12 +470,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 100px 50px;
+    padding: 150px 50px 100px 50px;
 }
 
 .mainBody .aboutMeBody .aboutBg {
     position: absolute;
-    top: -40px;
+    top: -10px;
     left: 0px;
     font-size: 25vw;
     color: #303030;
@@ -836,7 +836,7 @@
         position: relative;
         min-height: 100vh;
         max-height: fit-content;
-        padding: 100px 10px 100px 100px;
+        padding: 150px 10px 100px 100px;
         gap: 50px;
     }
 
@@ -929,8 +929,8 @@
     }
 
     .mainBody .floatingDivs .workBg {
-        top: 30%;
-        right: -30%;
+        top: 20%;
+        right: -10%;
     }
 
     .mainBody .landingPage {
@@ -999,7 +999,7 @@
         position: relative;
         min-height: 100vh;
         max-height: fit-content;
-        padding: 75px 50px 75px 100px;
+        padding: 100px 50px 75px 100px;
         gap: 50px;
     }
 
@@ -1036,8 +1036,8 @@
     }
 
     .mainBody .floatingDivs .workBg {
-        top: 30%;
-        right: -30%;
+        top: 20%;
+        right: -10%;
     }
 
     .mainBody .landingPage {
@@ -1111,8 +1111,8 @@
     }
 
     .mainBody .floatingDivs .workBg {
-        top: 20%;
-        right: -20%;
+        top: 10%;
+        right: -10%;
     }
 
     .mainBody .floatingDivs .downArrow {
@@ -1209,7 +1209,7 @@
         /* background-color: red; */
         position: relative;
         height: fit-content;
-        padding: 75px 50px 100px 15px;
+        padding: 100px 50px 100px 15px;
     }
 
     .mainBody .aboutMeBody .aboutBg {
