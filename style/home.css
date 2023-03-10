@@ -1103,6 +1103,7 @@
 @media screen and (max-width:600px) {
     .mainBody .nav {
         right: 30px;
+        gap:30px;
     }
 
     .mainBody .nav p {
