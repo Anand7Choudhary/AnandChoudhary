@@ -185,8 +185,15 @@ body {
 
     .myName .nameLetters {
         font-size: 9vw;
+        animation-name: rubberBand;
+        animation-iteration-count:2;
     }
-
+    .myName .nameLetters:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .myName .nameLetters:nth-child(2n){
+        animation-delay: 1s;
+    }
     .myName .lastName {
         flex-direction: column;
         gap: 20px;
