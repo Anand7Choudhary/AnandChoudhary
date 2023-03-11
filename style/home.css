@@ -828,7 +828,7 @@
     transition: all 0.15s linear;
 }
 
-.mainBody .projectBody .projectCard .projectImage img:hover{
+.mainBody .projectBody .projectCard .projectImage img:hover {
     transform: scale(1.1);
 }
 
@@ -895,6 +895,186 @@
     border-left: 5px solid #dbc500;
     border-right: none;
 }
+
+/* 
+
+
+
+*/
+/* spaceshuttle */
+.mainBody .spaceBody {
+    background-color: black;
+    background-color: transparent;
+    border-bottom: 2px solid #505050;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    color: #303030;
+    font-size: 48px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.mainBody .spaceBody i {
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainBody .spaceBody .spaceshipLaunch {
+    color: #fdfdfd;
+    position: relative;
+    animation: rocketLaunch infinite 7s;
+    transform-origin: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainBody .spaceBody .spaceshipLaunch .fireBody {
+    transform: rotateZ(180deg);
+    font-size: 30px;
+    color: #dbdb00;
+}
+
+@keyframes rocketLaunch {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-100px) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translateY(-100px) rotateZ(90deg);
+    }
+
+    90% {
+        transform: translate(100vw, -100px) rotateZ(90deg);
+    }
+
+    93% {
+        transform: translate(100vw, 1000px) rotateZ(90deg);
+    }
+
+    95% {
+        transform: translateY(1000px) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/* 
+
+
+
+*/
+/* xyz */
+.mainBody .myProduct {
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    background-color: #101010;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    padding: 100px 150px 100px 50px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:50px;
+}
+.mainBody .myProduct .title{
+    width: fit-content;
+    height: fit-content;
+    color:white;
+    text-align: center;
+    padding:5px 10px;
+    cursor: context-menu;
+}
+.mainBody .myProduct .title .majorTitle{
+    font-size: 36px;
+    color: #dbdb00;
+    opacity: 0;
+    margin-bottom: 10px;
+}
+.mainBody .myProduct .title .subTitle {
+    font-size: 24px;
+    color: #505050;
+    opacity: 0;
+}
+.mainBody .myProduct .cards{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:15px;
+    opacity: 0;
+}
+.mainBody .myProduct .cards .productCards {
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    color: white;
+    padding:30px 20px 15px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    gap:15px;
+    transition: all 0.15s linear;
+}
+.mainBody .myProduct .cards .productCards:hover{
+    transform: translateY(-10px);
+}
+.mainBody .myProduct .cards .productCards img{
+    width: 150px;
+    filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.75));
+    transition: all 0.15s linear;
+}
+.mainBody .myProduct .cards .productCards img:hover{
+    transform: scale(1.1);
+}
+.mainBody .myProduct .cards .productCards .title {
+    color: #dbdb00;
+    font-size: 28px;
+}
+.mainBody .myProduct .cards .productCards .info {
+    color: #ffffff;
+    font-size: 16px;
+}
+.mainBody .myProduct .cards .productCard1{
+    background: linear-gradient(132deg, rgba(1, 96, 105, 0.5) 37.32%, rgba(0, 72, 95,0.5) 100.00%);
+}
+.mainBody .myProduct .cards .productCard2 {
+    background: linear-gradient(132deg, rgba(115, 93, 142,0.5) 0.00%, rgba(58, 33, 86,0.5) 100.00%);
+}
+.mainBody .myProduct .cards .productCard3 {
+    background: linear-gradient(132deg, rgba(146, 11, 126,0.5) 0.00%, rgba(52, 29, 49,0.5) 100.00%);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1051,26 +1231,38 @@
     .mainBody .socialDivider {
         height: 200px;
     }
-    .mainBody .projectBody{
-        padding:200px 100px 100px 50px;
+
+    .mainBody .projectBody {
+        padding: 200px 100px 100px 50px;
     }
-    .mainBody .projectBody .projectCard .projectImage{
+
+    .mainBody .projectBody .projectCard .projectImage {
         align-self: center;
         bottom: unset;
         width: 300px;
         height: 175px;
     }
-    .mainBody .projectBody .projectCard .projectText{
-        padding:20px 20px 20px 180px;
+
+    .mainBody .projectBody .projectCard .projectText {
+        padding: 20px 20px 20px 180px;
     }
+
     .mainBody .projectBody .projectCard2 .projectText {
         padding: 20px 180px 20px 20px;
     }
-    .mainBody .projectBody .projectCard .projectText .title a{
+
+    .mainBody .projectBody .projectCard .projectText .title a {
         font-size: 32px;
     }
-    .mainBody .projectBody .projectCard .projectText .aboutProject{
+
+    .mainBody .projectBody .projectCard .projectText .aboutProject {
         font-size: 20px;
+    }
+    .mainBody .myProduct{
+        padding: 100px 100px 100px 50px;
+    }
+    .mainBody .myProduct .cards .productCards{
+        width: 350px;
     }
 }
 
@@ -1178,13 +1370,16 @@
         margin-right: 200px;
         margin-left: 100px;
     }
+
     .mainBody .projectBody {
         padding-top: 200px;
     }
-    .mainBody .projectBody .portfolioTitle{
-        left:50%;
+
+    .mainBody .projectBody .portfolioTitle {
+        left: 50%;
         transform: translate(-50%);
     }
+
     .mainBody .projectBody .projectCard .projectImage {
         height: 200px;
     }
@@ -1203,6 +1398,9 @@
 
     .mainBody .projectBody .projectCard .projectText .aboutProject {
         font-size: 16px;
+    }
+    .mainBody .spaceBody i:nth-child(2){
+        display: none;
     }
 }
 
@@ -1280,21 +1478,24 @@
     .mainBody .socialDivider {
         height: 150px;
     }
-    .mainBody .projectBody{
+
+    .mainBody .projectBody {
         padding-top: 175px;
     }
-    .mainBody .projectBody .projectCard{
+
+    .mainBody .projectBody .projectCard {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         background-color: rgba(51, 51, 51, 0.438);
-        padding:20px 10px;
+        padding: 20px 10px;
         overflow-x: hidden;
         box-shadow: 0 0 10px 2px #000000;
     }
-    .mainBody .projectBody .projectCard .projectImage{
+
+    .mainBody .projectBody .projectCard .projectImage {
         position: relative;
-        top:unset;
+        top: unset;
         left: unset;
         right: unset;
         bottom: unset;
@@ -1302,12 +1503,30 @@
         width: 300px;
         height: 150px;
     }
-    .mainBody .projectBody .projectCard .projectText{
+
+    .mainBody .projectBody .projectCard .projectText {
         width: 100%;
         align-items: flex-start;
-        padding:20px 20px;
+        padding: 20px 20px;
         border: none;
         background-color: transparent;
+    }
+    .mainBody .spaceBody i:nth-child(2),
+    .mainBody .spaceBody i:nth-child(3) {
+        display: none;
+    }
+    .mainBody .myProduct .cards .productCards {
+        margin-right: 50px;
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+    .mainBody .myProduct .title .majorTitle {
+        font-size: 26px;
+    }
+
+    .mainBody .myProduct .title .subTitle {
+        font-size: 18px;
     }
 }
 
@@ -1510,14 +1729,32 @@
         height: auto;
         padding: 20px;
     }
-    .mainBody .projectBody{
+
+    .mainBody .projectBody {
         padding-top: 150px;
     }
-    .mainBody .projectBody .projectCard .projectImage{
+
+    .mainBody .projectBody .projectCard .projectImage {
         width: 100%;
     }
+
     .mainBody .projectBody .projectCard .projectText .aboutProject {
         text-align: left;
+    }
+    .mainBody .spaceBody i:nth-child(2),
+    .mainBody .spaceBody i:nth-child(3),
+    .mainBody .spaceBody .shuttle1{
+        display: none;
+    }
+    .mainBody .myProduct{
+        padding:100px 50px 100px 50px;
+    }
+    .mainBody .myProduct .title .majorTitle {
+        font-size: 20px;
+    }
+
+    .mainBody .myProduct .title .subTitle {
+        font-size: 16px;
     }
 }
 
@@ -1536,8 +1773,12 @@
         top: 20px;
         left: 0px;
     }
-    .mainBody .projectBody{
-        padding:100px 40px 100px 20px;
+
+    .mainBody .projectBody {
+        padding: 100px 40px 100px 20px;
+    }
+    .mainBody .myProduct .cards .productCards {
+        margin-right: 0px;
     }
 }
 
@@ -1568,6 +1809,7 @@
         font-size: 1.25rem;
         padding: 0px;
     }
+
     .mainBody .projectBody {
         padding: 100px 30px 100px 20px;
     }
