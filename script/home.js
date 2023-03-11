@@ -131,3 +131,49 @@ const showLink=(flag,n)=>{
 const socialHref=(n)=>{
     document.getElementById("socialButton"+n).click();
 }
+
+
+
+// send email
+$(document).ready(function () {
+    $('#contact-form').submit(function (event) {
+        event.preventDefault();
+        sendForm();
+    });
+
+    function sendForm() {
+        const form = $('#contact-form')[0];
+        const formData = new FormData(form);
+
+        $.ajax({
+            url: 'https://api.emailjs.com/api/v1.0/email/send',
+            type: 'POST',
+            data: JSON.stringify({
+                service_id: 'service_2occ9x6',
+                template_id: 'template_80d0z2x',
+                user_id: '9_iBr633mbsnOdxy7',
+                template_params: {
+                    from_name: formData.get('name'),
+                    from_email: formData.get('email'),
+                    message: formData.get('message')
+                }
+            }),
+            contentType: 'application/json',
+            success: function (data) {
+                Swal.fire(
+                    'Great!',
+                    'Message Sent Successfully',
+                    'success'
+                )
+                form.reset();
+            },
+            error: function (error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                })
+            }
+        });
+    }
+});
