@@ -969,6 +969,7 @@
         transform: translateY(0);
     }
 }
+
 /* 
 
 
@@ -982,47 +983,53 @@
     background-color: #101010;
     display: flex;
     justify-content: flex-start;
-    align-items:center;
+    align-items: center;
     padding: 100px 150px 100px 50px;
     flex-wrap: wrap;
     flex-direction: column;
-    gap:50px;
+    gap: 50px;
+    position: relative;
 }
-.mainBody .myProduct .title{
+
+.mainBody .myProduct .title {
     width: fit-content;
     height: fit-content;
-    color:white;
+    color: white;
     text-align: center;
-    padding:5px 10px;
+    padding: 5px 10px;
     cursor: context-menu;
 }
-.mainBody .myProduct .title .majorTitle{
+
+.mainBody .myProduct .title .majorTitle {
     font-size: 36px;
     color: #dbdb00;
     opacity: 0;
     margin-bottom: 10px;
 }
+
 .mainBody .myProduct .title .subTitle {
     font-size: 24px;
     color: #505050;
     opacity: 0;
 }
-.mainBody .myProduct .cards{
+
+.mainBody .myProduct .cards {
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap:15px;
+    gap: 15px;
     opacity: 0;
 }
+
 .mainBody .myProduct .cards .productCards {
     width: 300px;
     height: 450px;
     background-color: white;
     color: white;
-    padding:30px 20px 15px 20px;
+    padding: 30px 20px 15px 20px;
     overflow-x: hidden;
     overflow-y: auto;
     display: flex;
@@ -1033,36 +1040,140 @@
     border-radius: 15px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    gap:15px;
+    gap: 15px;
     transition: all 0.15s linear;
 }
-.mainBody .myProduct .cards .productCards:hover{
+
+.mainBody .myProduct .cards .productCards:hover {
     transform: translateY(-10px);
 }
-.mainBody .myProduct .cards .productCards img{
+
+.mainBody .myProduct .cards .productCards img {
     width: 150px;
     filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.75));
     transition: all 0.15s linear;
 }
-.mainBody .myProduct .cards .productCards img:hover{
+
+.mainBody .myProduct .cards .productCards img:hover {
     transform: scale(1.1);
 }
+
 .mainBody .myProduct .cards .productCards .title {
     color: #dbdb00;
     font-size: 28px;
 }
+
 .mainBody .myProduct .cards .productCards .info {
     color: #ffffff;
     font-size: 16px;
 }
-.mainBody .myProduct .cards .productCard1{
-    background: linear-gradient(132deg, rgba(1, 96, 105, 0.5) 37.32%, rgba(0, 72, 95,0.5) 100.00%);
+
+.mainBody .myProduct .cards .productCard1 {
+    background: linear-gradient(132deg, rgba(1, 96, 105, 0.5) 37.32%, rgba(0, 72, 95, 0.5) 100.00%);
 }
+
 .mainBody .myProduct .cards .productCard2 {
-    background: linear-gradient(132deg, rgba(115, 93, 142,0.5) 0.00%, rgba(58, 33, 86,0.5) 100.00%);
+    background: linear-gradient(132deg, rgba(115, 93, 142, 0.5) 0.00%, rgba(58, 33, 86, 0.5) 100.00%);
 }
+
 .mainBody .myProduct .cards .productCard3 {
-    background: linear-gradient(132deg, rgba(146, 11, 126,0.5) 0.00%, rgba(52, 29, 49,0.5) 100.00%);
+    background: linear-gradient(132deg, rgba(146, 11, 126, 0.5) 0.00%, rgba(52, 29, 49, 0.5) 100.00%);
+}
+
+/* 
+
+
+
+*/
+/* contact */
+.mainBody .contactBody {
+    width: 100%;
+    height: fit-content;
+    padding: 100px 150px 100px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #030014;
+    flex-direction: column;
+    color: white;
+    gap: 15px;
+    position: relative;
+}
+.mainBody .contactBody .floating{
+    position: absolute;
+    width:fit-content;
+    height: fit-content;
+    right:20%;
+    top:350px;
+}
+.mainBody .contactBody .floating img{
+    width: 300px;
+    animation: rounding 30s linear infinite;
+    transform-origin: center center;
+}
+@keyframes rounding{
+    from{
+        transform: rotateZ(0deg);
+    }to{
+        transform: rotateZ(360deg);
+    }
+}
+.mainBody .contactBody .title {
+    align-self: center;
+    font-size: 48px;
+    color: #c1ae00;
+    cursor: context-menu;
+}
+
+.mainBody .contactBody p {
+    color: #505050;
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    cursor: context-menu;
+}
+
+.mainBody .contactBody .contactInfo {
+    width: 100%;
+    padding-left: 150px;
+}
+
+.mainBody .contactBody .contactInfo #contact-form {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mainBody .contactBody .contactInfo #contact-form input,
+.mainBody .contactBody .contactInfo #contact-form textarea {
+    width: 400px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #3030307d;
+    border: 2px solid #dbc50093;
+    padding: 15px 20px;
+    color: white;
+}
+.mainBody .contactBody .contactInfo #contact-form textarea{
+    max-width: 400px;
+}
+
+.mainBody .contactBody .contactInfo #contact-form input[type='submit'] {
+    width: 100px;
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+    border: 2px solid #929200;
+    transition: all 0.15s linear;
+    cursor: pointer;
+}
+
+.mainBody .contactBody .contactInfo #contact-form input[type='submit']:hover {
+    transform: scale(1.05);
+    background-color: #5a5a00;
+    border: 2px solid transparent;
 }
 
 
@@ -1079,9 +1190,19 @@
 
 
 
-
-
-
+@media screen and (max-width:1300px){
+.mainBody .contactBody .floating{
+    right:200px;
+}
+}
+@media screen and (max-width:1200px) {
+    .mainBody .contactBody .floating {
+        right: 150px;
+    }
+    .mainBody .contactBody .floating img{
+        width: 250px;
+    }
+}
 @media screen and (max-width:1100px) {
     .mainBody .nav {
         right: 50px;
@@ -1258,11 +1379,16 @@
     .mainBody .projectBody .projectCard .projectText .aboutProject {
         font-size: 20px;
     }
-    .mainBody .myProduct{
+
+    .mainBody .myProduct {
         padding: 100px 100px 100px 50px;
     }
-    .mainBody .myProduct .cards .productCards{
+
+    .mainBody .myProduct .cards .productCards {
         width: 350px;
+    }
+    .mainBody .contactBody .floating {
+        display: none;
     }
 }
 
@@ -1399,7 +1525,8 @@
     .mainBody .projectBody .projectCard .projectText .aboutProject {
         font-size: 16px;
     }
-    .mainBody .spaceBody i:nth-child(2){
+
+    .mainBody .spaceBody i:nth-child(2) {
         display: none;
     }
 }
@@ -1511,22 +1638,36 @@
         border: none;
         background-color: transparent;
     }
+
     .mainBody .spaceBody i:nth-child(2),
     .mainBody .spaceBody i:nth-child(3) {
         display: none;
     }
+
     .mainBody .myProduct .cards .productCards {
         margin-right: 50px;
         width: 100%;
         height: fit-content;
         padding-bottom: 50px;
     }
+
     .mainBody .myProduct .title .majorTitle {
         font-size: 26px;
     }
 
     .mainBody .myProduct .title .subTitle {
         font-size: 18px;
+    }
+    .mainBody .contactBody .contactInfo{
+        padding-left: 10px;
+    }
+    .mainBody .contactBody .contactInfo #contact-form input,
+    .mainBody .contactBody .contactInfo #contact-form textarea {
+        width: 400px;
+    }
+
+    .mainBody .contactBody .contactInfo #contact-form textarea {
+        max-width: 400px;
     }
 }
 
@@ -1741,20 +1882,43 @@
     .mainBody .projectBody .projectCard .projectText .aboutProject {
         text-align: left;
     }
+
     .mainBody .spaceBody i:nth-child(2),
     .mainBody .spaceBody i:nth-child(3),
-    .mainBody .spaceBody .shuttle1{
+    .mainBody .spaceBody .shuttle1 {
         display: none;
     }
-    .mainBody .myProduct{
-        padding:100px 50px 100px 50px;
+
+    .mainBody .myProduct {
+        padding: 100px 70px 100px 20px;
     }
+
     .mainBody .myProduct .title .majorTitle {
         font-size: 20px;
     }
 
     .mainBody .myProduct .title .subTitle {
         font-size: 16px;
+    }
+    .mainBody .contactBody{
+        padding-right: 70px;
+    }
+    .mainBody .contactBody .title{
+        font-size: 30px;
+    }
+    .mainBody .contactBody .contactInfo{
+        padding-left: 20px;
+    }
+    .mainBody .contactBody .contactInfo #contact-form{
+        width: 100%;
+    }
+    .mainBody .contactBody .contactInfo #contact-form input,
+    .mainBody .contactBody .contactInfo #contact-form textarea {
+        width: 100%;
+    }
+
+    .mainBody .contactBody .contactInfo #contact-form textarea {
+        max-width: 100%;
     }
 }
 
@@ -1777,8 +1941,12 @@
     .mainBody .projectBody {
         padding: 100px 40px 100px 20px;
     }
+
     .mainBody .myProduct .cards .productCards {
         margin-right: 0px;
+    }
+    .mainBody .contactBody {
+        padding:50px 50px;
     }
 }
 
