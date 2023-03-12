@@ -1,14 +1,71 @@
-let loader=sessionStorage.getItem("showLoader");
-if(loader==null){
-    sessionStorage.setItem("showLoader",0);
+let data, ip, carrierName, city, counter, time;
+let loader = sessionStorage.getItem("showLoader");
+if (loader == null) {
+    sessionStorage.setItem("showLoader", 0);
+    sessionStorage.setItem("reloadCount", 0);
     loader = sessionStorage.getItem("showLoader");
     setTimeout(function () {
         document.getElementById("loading-screen").style.display = "none";
         document.getElementById("mainBody").style.display = "block";
+        if (sessionStorage.getItem("reloadCount") == 0) {
+            document.getElementById("loading-screen").style.display = "none";
+            document.getElementById("mainBody").style.display = "block";
+            Swal.fire({
+                icon: 'info',
+                text: 'Hello There!',
+                html: 'Welcome to the site, hope you have a fun visit. Please do reach out to me if anything necessary. I would love to chat.' +
+                    '<br><br>' + 'You have a inmail feature to message me directly! Please read the <span style="color:#32BFFF;cursor:pointer;text-decoration:underline;" onclick="showTC()";>terms and conditions</span> present at the page footer.',
+            })
+            var request = new XMLHttpRequest();
+
+            request.open('GET', 'https://api.ipdata.co/?api-key=01774945792d4e7026458cb798169d7fa4973363440a99b86cf29406');
+
+            request.setRequestHeader('Accept', 'application/json');
+
+            request.onreadystatechange = function () {
+                if (sessionStorage.getItem("reloadCount") != 1) {
+                    sessionStorage.setItem("reloadCount", 0);
+                }
+                if (this.readyState === 4) {
+                    data = JSON.parse(this.responseText);
+                    ip = data["ip"];
+                    city = data["city"];
+                    carrierName = data["carrier"]["name"];
+                    time = data["time_zone"]["current_time"];
+                    counter = data["count"];
+                    if (sessionStorage.getItem("reloadCount") == 0) {
+                        $.ajax({
+                            url: 'https://api.emailjs.com/api/v1.0/email/send',
+                            type: 'POST',
+                            data: JSON.stringify({
+                                service_id: 'service_2occ9x6',
+                                template_id: 'template_x8zyc3r',
+                                user_id: '9_iBr633mbsnOdxy7',
+                                template_params: {
+                                    ip: ip,
+                                    city: city,
+                                    time: time,
+                                    carrierName: carrierName,
+                                    counter: counter
+                                }
+                            }),
+                            contentType: 'application/json',
+                            success: function (data) {
+                                sessionStorage.setItem("reloadCount", 1);
+                            },
+                            error: function (error) {}
+                        });
+                    }
+                }
+            };
+
+            request.send();
+        }
     }, 5000);
-}else{
+}
+if (sessionStorage.getItem("reloadCount") == 1) {
     document.getElementById("loading-screen").style.display = "none";
-    document.getElementById("mainBody").style.display="block";
+    document.getElementById("mainBody").style.display = "block";
 }
 
 // nav scroll
@@ -109,17 +166,17 @@ nameLetter.forEach(letter => {
 
 
 // show links on social hover
-const showLink=(flag,n)=>{
-    if(flag){
+const showLink = (flag, n) => {
+    if (flag) {
         for (let i = 1; i <= 4; i++) {
             document.getElementById("socialCover" + i).classList.remove("coverHover");
             document.getElementById("socialLink" + i).style.display = "none";
-            document.getElementById("socialImage"+i).style.transform="scale(1)";
+            document.getElementById("socialImage" + i).style.transform = "scale(1)";
         }
         document.getElementById("socialCover" + n).classList.add("coverHover");
         document.getElementById("socialLink" + n).style.display = "block";
         document.getElementById("socialImage" + n).style.transform = "scale(1.15)";
-    }else {
+    } else {
         for (let i = 1; i <= 4; i++) {
             document.getElementById("socialCover" + i).classList.remove("coverHover");
             document.getElementById("socialLink" + i).style.display = "none";
@@ -128,8 +185,8 @@ const showLink=(flag,n)=>{
     }
 }
 
-const socialHref=(n)=>{
-    document.getElementById("socialButton"+n).click();
+const socialHref = (n) => {
+    document.getElementById("socialButton" + n).click();
 }
 
 
@@ -150,21 +207,27 @@ $(document).ready(function () {
             type: 'POST',
             data: JSON.stringify({
                 service_id: 'service_2occ9x6',
-                template_id: 'template_80d0z2x',
+                template_id: 'template_x8zyc3r',
                 user_id: '9_iBr633mbsnOdxy7',
                 template_params: {
                     from_name: formData.get('name'),
                     from_email: formData.get('email'),
-                    message: formData.get('message')
+                    message: formData.get('message'),
+                    ip: ip,
+                    city: city,
+                    time: time,
+                    carrierName: carrierName,
+                    counter: counter
                 }
             }),
             contentType: 'application/json',
             success: function (data) {
-                Swal.fire(
-                    'Great!',
-                    'Message Sent Successfully',
-                    'success'
-                )
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Great!',
+                    text: 'Message Sent Successfully',
+                    timer: 1500
+                })
                 form.reset();
             },
             error: function (error) {
@@ -172,8 +235,125 @@ $(document).ready(function () {
                     icon: 'error',
                     title: 'Oops...',
                     text: 'Something went wrong!',
+                    timer: 1500
                 })
             }
         });
     }
 });
+
+// Hidden Contact
+$(document).ready(function () {
+    $('#ana-form').submit(function (event) {
+        event.preventDefault();
+        sendForm();
+    });
+
+    function sendForm() {
+        const form = $('#ana-form')[0];
+        const formData = new FormData(form);
+
+        $.ajax({
+            url: 'https://api.emailjs.com/api/v1.0/email/send',
+            type: 'POST',
+            data: JSON.stringify({
+                service_id: 'service_2occ9x6',
+                template_id: 'template_x8zyc3r',
+                user_id: '9_iBr633mbsnOdxy7',
+                template_params: {
+                    message: formData.get('hiddenMessage'),
+                    ip: ip,
+                    city: city,
+                    time: time,
+                    carrierName: carrierName,
+                    counter: counter
+                }
+            }),
+            contentType: 'application/json',
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Great!',
+                    text: 'Message Sent Successfully',
+                    timer: 1500
+                })
+                form.reset();
+            },
+            error: function (error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    timer: 1500
+                })
+            }
+        });
+    }
+});
+
+// show modal
+
+const showModal = (n) => {
+    if (n == 1) {
+        Swal.fire({
+            icon: 'info',
+            iconColor: 'green',
+            width: '80%',
+            grow: 'column',
+            title: 'Thanks to the respective creators',
+            html: 'Please refer the respective links<br>' +
+                '<a target="_blank" href="https://google.com">Google</a>',
+            icon: 'success'
+        })
+    } else {
+        Swal.fire({
+            icon: 'info',
+            iconColor: 'green',
+            width: '80%',
+            grow: 'column',
+            title: 'Terms and Conditions',
+            html: '<br><br>' +
+                "Welcome to Anand Choudhary 's Portfolio website. Please read the following terms and conditions carefully before using our website. By accessing or using our website, you agree to be bound by these terms and conditions. If you do not agree to these terms and conditions, you must not use our website." +
+                '<br><br>' +
+                "1. Use of the Website: By using our website,you represent that you are at least 12 years old or have obtained parental or guardian consent to use our website.You may only use our websitefor lawful purposes and in compliance with all applicable laws and regulations." +
+                '<br><br>' +
+                "2. Intellectual Property: All content,trademarks,logos,and other intellectual property on our website are the property of Anand Choudhary or the respective owners and may not be used without our prior written consent." +
+                '<br><br>' +
+                "3. Privacy Policy: We take the privacy of our users seriously.We collect user data such as IP address,carrier and time on our website via form submission for development purposes.By using our website,you agree to our privacy policy." +
+                '<br><br>' +
+                "4. Links to Third - Party Websites: Our website may contain links to third - party websites that are not owned or controlled by Anand Choudhary.We have no control over and assume no responsibilityfor,the content,privacy policies,or practices of any third - party websites.You acknowledge and agree that Anand Choudhary is not responsiblefor the availability of any such external sites or resources." +
+                '<br><br>' +
+                "5. Limitation of Liability: In no event shall Anand Choudhary be liable for any indirect,incidental,special,consequential,or punitive damages,including without limitation,loss of profits,data,use,goodwill,or other intangible losses,arising out of or in connection with(i) your access to or use of or inability to access or use the website;(ii) any conduct or content of any third party on the website;(iii) any content obtained from the website;and(iv) unauthorized access,use,or alteration of your transmissions or content,whether based on warranty,contract,tort(including negligence),or any other legal theory,even if we have been informed of the possibility of such damage,and even if a remedy set forth herein is found to have failed of its essential purpose.Our total liability to you for all claims arising out of or in connection with your use of the website shall not exceed the amount paid by you, if any, to us for accessing the website." +
+                '<br><br>' +
+                "6. Governing Law: These terms and conditions shall be governed by and construed in accordance with the laws of [country / state],and you submit to the non - exclusive jurisdiction of the courts located in Bangalore for the resolution of any disputes." +
+                '<br><br>' +
+                "By using our website, you acknowledge that you have read and understood these terms and conditions and agree to be bound by them.If you do not agree with any part of these terms and conditions, please do not use our website.",
+        })
+    }
+}
+
+function showTC() {
+    Swal.fire({
+        icon: 'info',
+        iconColor: 'green',
+        width: '80%',
+        grow: 'column',
+        title: 'Terms and Conditions',
+        html: '<br><br>' +
+            "Welcome to Anand Choudhary 's Portfolio website. Please read the following terms and conditions carefully before using our website. By accessing or using our website, you agree to be bound by these terms and conditions. If you do not agree to these terms and conditions, you must not use our website." +
+            '<br><br>' +
+            "1. Use of the Website: By using our website,you represent that you are at least 12 years old or have obtained parental or guardian consent to use our website.You may only use our websitefor lawful purposes and in compliance with all applicable laws and regulations." +
+            '<br><br>' +
+            "2. Intellectual Property: All content,trademarks,logos,and other intellectual property on our website are the property of Anand Choudhary or the respective owners and may not be used without our prior written consent." +
+            '<br><br>' +
+            "3. Privacy Policy: We take the privacy of our users seriously.We collect user data such as IP address,carrier and time on our website via form submission for development purposes.By using our website,you agree to our privacy policy." +
+            '<br><br>' +
+            "4. Links to Third - Party Websites: Our website may contain links to third - party websites that are not owned or controlled by Anand Choudhary.We have no control over and assume no responsibilityfor,the content,privacy policies,or practices of any third - party websites.You acknowledge and agree that Anand Choudhary is not responsiblefor the availability of any such external sites or resources." +
+            '<br><br>' +
+            "5. Limitation of Liability: In no event shall Anand Choudhary be liable for any indirect,incidental,special,consequential,or punitive damages,including without limitation,loss of profits,data,use,goodwill,or other intangible losses,arising out of or in connection with(i) your access to or use of or inability to access or use the website;(ii) any conduct or content of any third party on the website;(iii) any content obtained from the website;and(iv) unauthorized access,use,or alteration of your transmissions or content,whether based on warranty,contract,tort(including negligence),or any other legal theory,even if we have been informed of the possibility of such damage,and even if a remedy set forth herein is found to have failed of its essential purpose.Our total liability to you for all claims arising out of or in connection with your use of the website shall not exceed the amount paid by you, if any, to us for accessing the website." +
+            '<br><br>' +
+            "6. Governing Law: These terms and conditions shall be governed by and construed in accordance with the laws of [country / state],and you submit to the non - exclusive jurisdiction of the courts located in Bangalore for the resolution of any disputes." +
+            '<br><br>' +
+            "By using our website, you acknowledge that you have read and understood these terms and conditions and agree to be bound by them.If you do not agree with any part of these terms and conditions, please do not use our website.",
+    })
+}

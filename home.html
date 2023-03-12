@@ -16,7 +16,7 @@
     <!-- loading Screen -->
     <div class="loading-screen" id="loading-screen">
         <div class="loadingTitle">Say hello to
-            <img class="lord-icon" alt="Cheering Man Image" src="image/loaderTag.webp">
+            <!-- <img class="lord-icon" alt="Loader Tag" src="image/loaderTag.webp"> -->
         </div>
         <div class="dropping-texts">
             <div>Designers</div>
@@ -30,9 +30,8 @@
         <div class="nav" id="navBar">
             <p>Home</p>
             <p>About</p>
-            <p>Work</p>
-            <p>Project</p>
             <p>Skills</p>
+            <p>portfolio</p>
             <p>Contact</p>
             <p>_______________</p>
         </div>
@@ -525,20 +524,20 @@
                     </span>
                 </p>
             </div>
-            <div class="cards animate-on-scroll2">
-                <div class="productCards productCard1">
+            <div class="cards">
+                <div class="productCards productCard1 animate-on-scroll2">
                     <img alt="web" src="image/web-template.webp" />
                     <p class="title">Web Development</p>
                     <p class="info">Experience in developing web application using HTML, CSS, JavaScript, React
                         framework, C#, ASP.net, Flask(Python), MySQL,SQLite.</p>
                 </div>
-                <div class="productCards productCard2">
+                <div class="productCards productCard2 animate-on-scroll2">
                     <img alt="web" src="image/bar-chart.webp" />
                     <p class="title">Business Development</p>
                     <p class="info">Highly detailed in Business growth analysis so has to boost the growth of an
                         organization to build the next generation technology and stay ahead of the competition.</p>
                 </div>
-                <div class="productCards productCard3">
+                <div class="productCards productCard3 animate-on-scroll2">
                     <img alt="web" src="image/syntax-foder.webp" />
                     <p class="title">Software Programming</p>
                     <p class="info">Skilled in programming and developing applications using C++, JAVA, Python
@@ -585,6 +584,109 @@
             <p><span>
                     <</span>/html <span>>
                 </span></p>
+        </div>
+        <!-- 
+
+
+            footer
+         -->
+        <div class="footer">
+            <div class="footerContent animate-on-scroll2">
+                <div class="footerNav">
+                    <p>
+                        <span style="white-space:nowrap;">
+                            <span class="nameLetters">N</span>
+                            <span class="nameLetters">a</span>
+                            <span class="nameLetters">v</span>
+                            <span class="nameLetters">i</span>
+                            <span class="nameLetters">g</span>
+                            <span class="nameLetters">a</span>
+                            <span class="nameLetters">t</span>
+                            <span class="nameLetters">i</span>
+                            <span class="nameLetters">o</span>
+                            <span class="nameLetters">n</span>
+                        </span>
+                    </p>
+                    <p><a href="">Home</a></p>
+                    <p><a href="">About</a></p>
+                    <p><a href="">Skills</a></p>
+                    <p><a href="">Portfolio</a></p>
+                    <p><a href="">Contact</a></p>
+                </div>
+                <div class="socials">
+                    <p>
+                        <span style="white-space:nowrap;">
+                            <span class="nameLetters">S</span>
+                            <span class="nameLetters">o</span>
+                            <span class="nameLetters">c</span>
+                            <span class="nameLetters">i</span>
+                            <span class="nameLetters">a</span>
+                            <span class="nameLetters">l</span>
+                            <span class="nameLetters">&ensp;</span>
+                        </span>
+                        <span style="white-space:nowrap;">
+                            <span class="nameLetters">L</span>
+                            <span class="nameLetters">i</span>
+                            <span class="nameLetters">n</span>
+                            <span class="nameLetters">k</span>
+                            <span class="nameLetters">s</span>
+                        </span>
+                    </p>
+                    <p><a target="_blank" href="">Github</a></p>
+                    <p><a target="_blank" href="">Linkedin</a></p>
+                    <p><a target="_blank" href="">Instagram</a></p>
+                    <p><a target="_blank" href="">Twitter</a></p>
+                </div>
+                <div class="essentials socials">
+                    <p>
+                        <span style="white-space:nowrap;">
+                            <span class="nameLetters">E</span>
+                            <span class="nameLetters">s</span>
+                            <span class="nameLetters">s</span>
+                            <span class="nameLetters">e</span>
+                            <span class="nameLetters">n</span>
+                            <span class="nameLetters">t</span>
+                            <span class="nameLetters">i</span>
+                            <span class="nameLetters">a</span>
+                            <span class="nameLetters">l</span>
+                            <span class="nameLetters">s</span>
+                        </span>
+                    </p>
+                    <p><a onclick="showModal(1)">Images</a></p>
+                    <p><a onclick="showModal(2)">Terms and Conditions</a></p>
+                </div>
+                <div class="hiddenText">
+                    <p>
+                        <span style="white-space:nowrap;">
+                            <span class="nameLetters">A</span>
+                            <span class="nameLetters">n</span>
+                            <span class="nameLetters">o</span>
+                            <span class="nameLetters">n</span>
+                            <span class="nameLetters">y</span>
+                            <span class="nameLetters">m</span>
+                            <span class="nameLetters">o</span>
+                            <span class="nameLetters">u</span>
+                            <span class="nameLetters">s</span>
+                            <span class="nameLetters">&nbsp;</span>
+                        </span>
+                        <span style="white-space:nowrap;">
+                            <span class="nameLetters">t</span>
+                            <span class="nameLetters">e</span>
+                            <span class="nameLetters">x</span>
+                            <span class="nameLetters">t</span>
+                            <span class="nameLetters">?</span>
+                        </span>
+                    </p>
+                    <form id="ana-form">
+                        <textarea id="hiddenMessage" name="hiddenMessage" rows="6" placeholder="Your Text"
+                            required></textarea>
+                        <button class="btn" type="submit">Send</button>
+                    </form>
+                </div>                
+            </div>
+            <div class="moon">
+                <div class="moon"><img alt="moon" src="image/moon.webp"></div>
+            </div>
         </div>
     </div>
     <noscript>Oops! why is your javascript disabled?</noscript>
