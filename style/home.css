@@ -1,3 +1,8 @@
+/* sweetAlert2 */
+.swal2-html-container {
+    text-align: justify !important;
+    padding:0 40px;
+}
 .lineUp {
     opacity: 1;
     animation: 2s anim-lineUp ease-out forwards;
@@ -23,6 +28,53 @@
     /* font-family: 'Oswald',sans-serif; */
     z-index: 1;
     margin-top: -25px;
+}
+
+form .btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+    border-bottom: 1px solid #ffc506;
+}
+
+form .btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #7e7e00;
+    transition: .5s ease;
+}
+
+form .btn:hover {
+    color: #000000;
+    transition-delay: .5s;
+}
+
+form .btn:hover::before {
+    width: 100%;
+}
+
+form .btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: .4s ease;
+    z-index: -1;
+}
+form .btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: rgb(0, 0, 0);
 }
 
 @keyframes rubberBand {
@@ -1021,7 +1073,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    opacity: 0;
 }
 
 .mainBody .myProduct .cards .productCards {
@@ -1042,6 +1093,7 @@
     -webkit-backdrop-filter: blur(4px);
     gap: 15px;
     transition: all 0.15s linear;
+    opacity: 0;
 }
 
 .mainBody .myProduct .cards .productCards:hover {
@@ -1099,25 +1151,31 @@
     gap: 15px;
     position: relative;
 }
-.mainBody .contactBody .floating{
+
+.mainBody .contactBody .floating {
     position: absolute;
-    width:fit-content;
+    width: fit-content;
     height: fit-content;
-    right:20%;
-    top:350px;
+    right: 20%;
+    top: 350px;
 }
-.mainBody .contactBody .floating img{
+
+.mainBody .contactBody .floating img {
     width: 300px;
     animation: rounding 30s linear infinite;
     transform-origin: center center;
 }
-@keyframes rounding{
-    from{
+
+@keyframes rounding {
+    from {
         transform: rotateZ(0deg);
-    }to{
+    }
+
+    to {
         transform: rotateZ(360deg);
     }
 }
+
 .mainBody .contactBody .title {
     align-self: center;
     font-size: 48px;
@@ -1156,8 +1214,11 @@
     padding: 15px 20px;
     color: white;
 }
-.mainBody .contactBody .contactInfo #contact-form textarea{
+
+.mainBody .contactBody .contactInfo #contact-form textarea {
     max-width: 400px;
+    min-width: 400px;
+    min-height: 100px;
 }
 
 .mainBody .contactBody .contactInfo #contact-form input[type='submit'] {
@@ -1165,15 +1226,153 @@
     align-self: flex-end;
     border: none;
     background-color: transparent;
-    border: 2px solid #929200;
+    border: 2px solid #7d7d00;
     transition: all 0.15s linear;
     cursor: pointer;
 }
 
 .mainBody .contactBody .contactInfo #contact-form input[type='submit']:hover {
     transform: scale(1.05);
-    background-color: #5a5a00;
+    background-color: #bee900;
     border: 2px solid transparent;
+    color: black;
+}
+
+/* 
+
+
+
+*/
+/* footer */
+.mainBody .footer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 0px 500px 0px;
+    position: relative;
+    color: white;
+    background-color: #000000;
+}
+
+.mainBody .footer .moon {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+.mainBody .footer .moon img {
+    width: 100%;
+    animation: rounding 30s linear infinite;
+    transform-origin: center center;
+}
+
+.mainBody .footer .footerContent {
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 100px 30px;
+    padding: 50px 150px 0px 50px;
+    opacity: 0;
+}
+
+.mainBody .footer .footerContent .hiddenText {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    cursor: context-menu;
+    overflow-x: hidden;
+    /* text-align: center; */
+    color: #ececec;
+    padding:0 10px;
+}
+
+.mainBody .footer .footerContent .hiddenText form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: auto;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.mainBody .footer .footerContent .hiddenText form textarea {
+    /* min-width: 250px;
+    max-width: 250px; */
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    background-color: transparent;
+    border-radius: 7px;
+    border: 2px solid #757500;
+    padding: 20px 30px;
+    color: white;
+}
+
+.mainBody .footer .footerContent .hiddenText form button {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #ececec;
+    align-self: flex-start;
+    cursor: pointer;
+    border: 1px solid #a49400;
+}
+.mainBody .footer .footerContent .hiddenText form button:hover{
+    color: #000000;
+}
+.mainBody .footer .footerContent .socials,
+.mainBody .footer .footerContent .footerNav{
+    width: 300px;
+    height: 100%;
+    position: relative;
+}
+.mainBody .footer .footerContent .socials p,
+.mainBody .footer .footerContent .footerNav p{
+    color: #707070;
+    margin-top: 15px;
+    transition: all 0.25s linear;
+}
+.mainBody .footer .footerContent .socials p a,
+.mainBody .footer .footerContent .footerNav p a{
+    color: #909090;
+    transition: all 0.05s linear;
+    text-decoration: none;
+}
+.mainBody .footer .footerContent .socials p a:hover,
+.mainBody .footer .footerContent .footerNav p a:hover{
+    color:white;
+    transform: scale(1.01);
+}
+.mainBody .footer .footerContent .socials p:first-child,
+.mainBody .footer .footerContent .footerNav p:first-child{
+    margin: 0;
+    margin-bottom: 50px;
+    position: relative;
+    /* top:-7px; */
+    color:#ececec;
 }
 
 
@@ -1184,25 +1383,22 @@
 
 
 
-
-
-
-
-
-
-@media screen and (max-width:1300px){
-.mainBody .contactBody .floating{
-    right:200px;
+@media screen and (max-width:1300px) {
+    .mainBody .contactBody .floating {
+        right: 200px;
+    }
 }
-}
+
 @media screen and (max-width:1200px) {
     .mainBody .contactBody .floating {
         right: 150px;
     }
-    .mainBody .contactBody .floating img{
+
+    .mainBody .contactBody .floating img {
         width: 250px;
     }
 }
+
 @media screen and (max-width:1100px) {
     .mainBody .nav {
         right: 50px;
@@ -1387,8 +1583,22 @@
     .mainBody .myProduct .cards .productCards {
         width: 350px;
     }
+
     .mainBody .contactBody .floating {
         display: none;
+    }
+    .mainBody .footer .footerContent{
+        padding:50px 100px 0px 50px;
+    }
+    .mainBody .footer .footerContent .hiddenText{
+        width: 100%;
+    }
+    .mainBody .footer .footerContent .hiddenText form{
+        width: 50%;
+    }
+    .mainBody .footer .footerContent .hiddenText form textarea{
+        min-width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -1658,9 +1868,11 @@
     .mainBody .myProduct .title .subTitle {
         font-size: 18px;
     }
-    .mainBody .contactBody .contactInfo{
+
+    .mainBody .contactBody .contactInfo {
         padding-left: 10px;
     }
+
     .mainBody .contactBody .contactInfo #contact-form input,
     .mainBody .contactBody .contactInfo #contact-form textarea {
         width: 400px;
@@ -1668,6 +1880,10 @@
 
     .mainBody .contactBody .contactInfo #contact-form textarea {
         max-width: 400px;
+        min-width: 400px;
+    }
+    .mainBody .footer .footerContent .hiddenText form{
+        width: 100%;
     }
 }
 
@@ -1900,24 +2116,43 @@
     .mainBody .myProduct .title .subTitle {
         font-size: 16px;
     }
-    .mainBody .contactBody{
+
+    .mainBody .contactBody {
         padding-right: 70px;
     }
-    .mainBody .contactBody .title{
+
+    .mainBody .contactBody .title {
         font-size: 30px;
     }
-    .mainBody .contactBody .contactInfo{
+
+    .mainBody .contactBody .contactInfo {
         padding-left: 20px;
     }
-    .mainBody .contactBody .contactInfo #contact-form{
+
+    .mainBody .contactBody .contactInfo #contact-form {
         width: 100%;
     }
+
     .mainBody .contactBody .contactInfo #contact-form input,
     .mainBody .contactBody .contactInfo #contact-form textarea {
         width: 100%;
     }
 
     .mainBody .contactBody .contactInfo #contact-form textarea {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .mainBody .footer .footerContent{
+        padding:50px 100px 0px 50px;
+    }
+    .mainBody .footer .footerContent .hiddenText{
+        width: 100%;
+    }
+    .mainBody .footer .footerContent .hiddenText form{
+        width: 100%;
+    }
+    .mainBody .footer .footerContent .hiddenText form textarea{
+        min-width: 100%;
         max-width: 100%;
     }
 }
@@ -1945,8 +2180,9 @@
     .mainBody .myProduct .cards .productCards {
         margin-right: 0px;
     }
+
     .mainBody .contactBody {
-        padding:50px 50px;
+        padding: 50px 50px;
     }
 }
 

@@ -6,116 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/f72c18304b.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             width: 100vw;
             height: 100vh;
-            background-color: #000023;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            overflow-x: hidden;
+            background-color: #cacaca;
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
         }
 
-        .spaceBody {
-            background-color: black;
+        .footer {
             width: 100%;
-            height: 300px;
-            overflow: hidden;
-            color: #505050;
-            font-size: 48px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
-            gap: 10px;
-        }
-
-        .spaceBody i {
-            min-width: 100px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .spaceBody .spaceshipLaunch {
-            color: #ffffff;
+            height: fit-content;
+            background-color: #cacaca;
             position: relative;
-            animation: rocketLaunch infinite 7s;
-            transform-origin: center center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
 
-        .spaceBody .spaceshipLaunch .fireBody {
-            transform: rotateZ(180deg);
-            font-size: 30px;
-            color: #dbdb00;
+        .footer .upperDiv {
+            -webkit-clip-path: polygon(100% 0, 100% 63%, 90% 54%, 81% 59%, 64% 51%, 48% 63%, 30% 59%, 20% 69%, 0 61%, 0 0);
+            clip-path: polygon(100% 0, 100% 63%, 90% 54%, 81% 59%, 64% 51%, 48% 63%, 30% 59%, 20% 69%, 0 61%, 0 0);
+            background-color: #dfdfdf;
+            width: 100%;
+            height: 600px;
+            filter: drop-shadow(0px 10px 10px rgb(0, 0, 0));
+            position: relative;
+            z-index: 1;
         }
-
-        @keyframes rocketLaunch {
-            0% {
-                transform: translateY(0);
-            }
-
-            30% {
-                transform: translateY(-100px) rotateZ(0deg);
-            }
-
-            50% {
-                transform: translateY(-100px) rotateZ(90deg);
-            }
-
-            90% {
-                transform: translate(100vw, -100px) rotateZ(90deg);
-            }
-
-            93% {
-                transform: translate(100vw, 1000px) rotateZ(90deg);
-            }
-
-            95% {
-                transform: translateY(1000px) rotateZ(0deg);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
+        /* .footer .upperDivShadow{
+            -webkit-clip-path: polygon(100% 0, 100% 64%, 92% 58%, 82% 63%, 62% 46%, 48% 65%, 33% 62%, 20% 71%, 0
+            56%, 0 0);
+            clip-path: polygon(100% 0, 100% 64%, 92% 58%, 82% 63%, 62% 46%, 48% 65%, 33% 62%, 20% 71%, 0 56%, 0 0);
+            position: absolute;
+            width: 100%;
+            height: 600px;
+            background-color: #dfdfdf;
+        } */
+        .footer .lowerDiv{
+            -webkit-clip-path: polygon(100% 100%, 100% 68%, 93% 55%, 82% 65%, 64% 57%, 48% 69%, 34% 65%, 20% 75%, 0
+            64%, 0 100%);
+            clip-path: polygon(100% 100%, 100% 68%, 93% 55%, 82% 65%, 64% 57%, 48% 69%, 34% 65%, 20% 75%, 0 64%, 0
+            100%);
+            position: relative;
+            top:-400px;
+            width: 100%;
+            height: 400px;
+            background-color: #dfdfdf;
+;
         }
     </style>
 </head>
-<div class="spaceBody">
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <div class="spaceshipLaunch">
-        <i class="fa-brands fa-space-awesome"></i>
-        <div class="fireBody">
-            <i class="fa-solid fa-fire rocketFire fa-beat-fade"
-                style="--fa-beat-fade-opacity: 0.45; --fa-beat-fade-scale: 1.075;"></i>
-        </div>
-    </div>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-    <i class="fa-brands fa-space-awesome"></i>
-</div>
 
 <body>
+    <div class="footer">
+        <div class="upperDivShadow">
+            
+        </div>
+        <div class="upperDiv">
 
+        </div>
+        <div class="lowerDiv">
+            
+        </div>
+    </div>
+    <div class="lowerDivShadow">
+        <!-- -webkit-clip-path: polygon(100% 100%, 100% 70%, 93% 54%, 82% 63%, 64% 60%, 48% 71%, 34% 64%, 20% 73%, 0
+                62%, 0 100%);
+                clip-path: polygon(100% 100%, 100% 70%, 93% 54%, 82% 63%, 64% 60%, 48% 71%, 34% 64%, 20% 73%, 0 62%, 0
+                100%); -->
+    </div>
 </body>
 
 </html>

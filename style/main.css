@@ -96,8 +96,9 @@ body {
     animation-play-state:running;
 }
 .myName .anandTitle .nameLetters {
-    background-image: url(../image/anandBg.webp);
-    background-size: cover;
+    /* background-image: url(../image/anandBg.webp); */
+    background-size:100% 100%;
+    background-repeat: no-repeat;
     color: transparent;
     background-clip: text;
     -moz-background-clip: text;
