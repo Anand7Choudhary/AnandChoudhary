@@ -90,6 +90,10 @@ $(document).ready(function () {
                     window.location.hash = hash; // set the hash to the original value (without subtracting 72)
                 }
             );
+            // Remove the 'hovered' class from all the 'p' elements
+            $('.nav p').removeClass('hovered');
+            // Add the 'hovered' class to the clicked 'p' element
+            $(this).parent('p').addClass('hovered');
         }
     });
     $('.footerNav').find('a').on("click", function (event) {
@@ -105,9 +109,36 @@ $(document).ready(function () {
                     window.location.hash = hash; // set the hash to the original value (without subtracting 72)
                 }
             );
+            // Remove the 'hovered' class from all the 'p' elements
+            $('.nav p').removeClass('hovered');
+            // Add the 'hovered' class to the clicked 'p' element
+            $(this).parent('p').addClass('hovered');
         }
     });
 });
+
+
+// get all the navigation links
+const navLinks = document.querySelectorAll('.nav a');
+
+// add a scroll event listener to the window object
+window.onscroll = function () {
+    // loop through each navigation link
+    navLinks.forEach(link => {
+        // get the section id from the link's href attribute
+        const sectionId = link.getAttribute('href');
+        // get the corresponding section element
+        const section = document.querySelector(sectionId);
+        // check if the section is visible in the viewport
+        if (section.getBoundingClientRect().top <= 0 && section.getBoundingClientRect().bottom > 0) {
+            // if the section is visible, add a "active" class to the link's parent element
+            link.parentNode.classList.add('hovered');
+        } else {
+            // otherwise, remove the "active" class from the link's parent element
+            link.parentNode.classList.remove('hovered');
+        }
+    });
+};
 
 
 
