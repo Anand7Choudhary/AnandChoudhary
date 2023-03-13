@@ -5,7 +5,7 @@
 }
 .lineUp {
     opacity: 1;
-    animation: 2s anim-lineUp ease-out forwards;
+    animation: 1s anim-lineUp ease-out forwards;
 }
 
 .skewUp {
@@ -175,10 +175,10 @@ form .btn:hover::after {
     color: #ffe600;
     text-decoration: none;
 }
-.mainBody .nav p:hover {
+/* .mainBody .nav p:hover {
     transform: rotate(-90deg) scale(1.15); 
     font-weight: bold;
-}
+} */
 .mainBody .nav .hovered{
     transform: rotate(-90deg) scale(1.15);
     font-weight: bold;
@@ -1903,6 +1903,9 @@ form .btn:hover::after {
 }
 
 @media screen and (max-width:600px) {
+    .mainBody{
+        padding-left: 10px;
+    }
     .mainBody .nav {
         right: 50px;
         gap: 20px;
@@ -2145,7 +2148,7 @@ form .btn:hover::after {
     }
 
     .mainBody .contactBody .contactInfo #contact-form {
-        width: 100%;
+        width: 90%;
     }
 
     .mainBody .contactBody .contactInfo #contact-form input,
