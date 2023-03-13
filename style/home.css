@@ -1006,11 +1006,11 @@ form .btn:hover::after {
     }
 
     90% {
-        transform: translate(100vw, -100px) rotateZ(90deg);
+        transform: translate(110vw, -100px) rotateZ(90deg);
     }
 
     93% {
-        transform: translate(100vw, 1000px) rotateZ(90deg);
+        transform: translate(110vw, 1000px) rotateZ(90deg);
     }
 
     95% {
