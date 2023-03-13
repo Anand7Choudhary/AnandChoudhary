@@ -18,7 +18,7 @@ if (loader == null) {
                 allowOutsideClick: false,
                 html: 'Welcome to the site, hope you have a fun visit. Please do reach out to me if anything necessary. I would love to chat.' +
                     '<br><br>' + 'You can contact us via our inmail contact feature.',
-                footer: '<span style="color:#32BFFF;cursor:pointer;" onclick="showTC()";>terms and conditions</span>',
+                footer:'<span>By entering you confirm the <span style="color:#32BFFF;cursor:pointer;" onclick="showTC()";>terms and conditions</span></span>',
             }).then((result) => {
                 if (result.isConfirmed) {
                     var request = new XMLHttpRequest();
@@ -307,9 +307,18 @@ const showModal = (n) => {
             iconColor: 'green',
             width: '80%',
             grow: 'column',
-            title: 'Thanks to the respective creators',
-            html: 'Please refer the respective links<br>' +
-                '<a target="_blank" href="https://google.com">Google</a>',
+            title: 'Credit to the respective creators',
+            html: 'Please refer to the respective owners, amazing talents!<br><br>' + 
+                '<div style="width:100%;display: grid;grid-template-columns: repeat(auto-fill,200px);grid-template-rows: auto;grid-column-gap: 20px;grid-row-gap: 50px;text-align:left">' +
+                    '<a target="_blank" href="https://iconscout.com/">iconscout.com</a>' +
+                    '<a target="_blank" href="https://iconscout.com/contributors/iqonic-design">iqonic.design</a>' +
+                    '<a target="_blank" href="https://iconscout.com/contributors/thehalaldesign">The Halal Design Studio</a>' +
+                    '<a target="_blank" href="https://iconscout.com/contributors/dwianggaicon">Dwiangga Design</a>' +
+                    '<a target="_blank" href="https://iconscout.com/contributors/uigo">👑 UIGO Design</a>' +
+                    '<a target="_blank" href="https://iconscout.com/contributors/candraraharjo">Sican</a>' +
+                    '<a target="_blank" href="https://iconscout.com/contributors/flixystd">Flixy Studio</a>' +
+                    '<a target="_blank" href="https://iconscout.com/contributors/rizkiahmadfauzi28">Rizki Ahmad Fauzi</a>'+
+                '</div>',
             icon: 'success'
         })
     } else {
