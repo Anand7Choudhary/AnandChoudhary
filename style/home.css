@@ -131,7 +131,7 @@ form .btn:hover::after {
 .mainBody {
     display: none;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     position: relative;
     overflow-x: hidden;
     background-color: #030014;
@@ -139,6 +139,7 @@ form .btn:hover::after {
     font-family: 'Comfortaa', cursive;
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Oswald',sans-serif; */
+    scroll-behavior:smooth;
 }
 
 .mainBody .nav {
@@ -169,7 +170,10 @@ form .btn:hover::after {
     padding: 20px 0px;
     transform-origin: right;
 }
-
+.mainBody .nav p a{
+    color: #ffe600;
+    text-decoration: none;
+}
 .mainBody .nav p:hover {
     transform: rotate(-90deg) scale(1.25);
 }
@@ -187,28 +191,33 @@ form .btn:hover::after {
 
 .mainBody .floatingDivs .nameSign {
     position: fixed;
-    top: 20px;
-    left: 50px;
-    font-size: 36px;
+    bottom: 20px;
+    left: 20px;
+    font-size: 30px;
     cursor: pointer;
     z-index: 10;
     background: rgba(0, 0, 0, 0.6);
     /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(4.5px);
+    /* border-radius: 10px; */
+    /* border: 2px solid rgba(255, 255, 255, 0.18); */
+    /* padding: 5px 20px; */
+    /* display: none; */
+    overflow: hidden;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 10px 30px;
-    display: none;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+.mainBody .floatingDivs .nameSign:hover{
+    border: 2px solid #dbc500;
 }
 
 .mainBody .floatingDivs .nameSign a {
+    padding: 5px 15px;
     text-decoration: none;
-    color: #dbc50096;
-}
-
-.mainBody .floatingDivs .nameSign a:hover {
-    color: #dbc500;
+    color: #b9a700;
 }
 
 .mainBody .floatingDivs .workBg {
@@ -522,15 +531,15 @@ form .btn:hover::after {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 150px 50px 100px 50px;
+    padding: 150px 50px 200px 50px;
 }
 
 .mainBody .aboutMeBody .aboutBg {
     position: absolute;
     top: -10px;
     left: 0px;
-    font-size: 25vw;
-    color: #303030;
+    font-size: 20vw;
+    color: #202020;
     font-family: 'Oswald', sans-serif;
 }
 
