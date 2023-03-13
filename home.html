@@ -28,23 +28,23 @@
     <!-- main body -->
     <div class="mainBody" id="mainBody">
         <div class="nav" id="navBar">
-            <p>Home</p>
-            <p>About</p>
-            <p>Skills</p>
-            <p>portfolio</p>
-            <p>Contact</p>
+            <p><a href="#landingPage">Home</a></p>
+            <p><a href="#aboutMePage">About</a></p>
+            <p><a href="#skillsPage">Skills</a></p>
+            <p><a href="#projectPage">portfolio</a></p>
+            <p><a href="#contactPage">Contact</a></p>
             <p>_______________</p>
         </div>
         <div class="floatingDivs">
             <div class="nameSign lineUp">
-                <a href="home.html">Anand Choudhary</a>
+                <a href="index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
             </div>
             <div class="workBg">ANA</div>
             <!-- <i class="fa-solid fa-angles-down downArrow fa-bounce"></i> -->
             <div class="aboutBg">ABOUT</div>
         </div>
         <!-- landing Page -->
-        <div class="landingPage">
+        <div class="landingPage" id="landingPage">
             <div class="landingPageTitle lineUp">
                 <p><span style="white-space:nowrap;">
                         <span class="nameLetters">A</span>
@@ -182,7 +182,7 @@
 
          -->
         <!-- about me -->
-        <div class="aboutMeBody">
+        <div class="aboutMeBody" id="aboutMePage">
             <p class="aboutBg">ABOUT</p>
             <div class="imgDiv animate-on-scroll2">
                 <img alt="My Picture" src="image/anand.webp">
@@ -308,7 +308,7 @@
 
          -->
         <!-- Skills -->
-        <div class="skillsBody">
+        <div class="skillsBody" id="skillsPage">
             <!-- <p class="skillTitle">Skills</p> -->
             <div class="skillText">
                 <div class="someSkillTexts">
@@ -349,7 +349,7 @@
 
             Projects
          -->
-        <div class="projectBody">
+        <div class="projectBody" id="projectPage">
             <div class="portfolioTitle">Portfolio</div>
             <div class="projectCard projectCard1 animate-on-scroll2">
                 <div class="projectImage">
@@ -551,7 +551,7 @@
 
             contact
          -->
-        <div class="contactBody">
+        <div class="contactBody" id="contactPage">
             <div class="floating">
                 <img alt="Planet" src="image/planet.webp">
             </div>
@@ -607,11 +607,11 @@
                             <span class="nameLetters">n</span>
                         </span>
                     </p>
-                    <p><a href="">Home</a></p>
-                    <p><a href="">About</a></p>
-                    <p><a href="">Skills</a></p>
-                    <p><a href="">Portfolio</a></p>
-                    <p><a href="">Contact</a></p>
+                    <p><a href="#landingPage">Home</a></p>
+                    <p><a href="#aboutMePage">About</a></p>
+                    <p><a href="#skillsPage">Skills</a></p>
+                    <p><a href="#projectPage">Portfolio</a></p>
+                    <p><a href="#contactPage">Contact</a></p>
                 </div>
                 <div class="socials">
                     <p>
@@ -632,10 +632,11 @@
                             <span class="nameLetters">s</span>
                         </span>
                     </p>
-                    <p><a target="_blank" href="">Github</a></p>
-                    <p><a target="_blank" href="">Linkedin</a></p>
-                    <p><a target="_blank" href="">Instagram</a></p>
-                    <p><a target="_blank" href="">Twitter</a></p>
+                    <p><a target="_blank" href="https://github.com/Anand7Choudhary">Github</a></p>
+                    <p><a target="_blank" href="https://www.linkedin.com/in/anand-choudhary-51b4211b8/">Linkedin</a></p>
+                    <p><a target="_blank" href="https://www.instagram.com/staying.anand/">Instagram</a></p>
+                    <p><a target="_blank" href="https://twitter.com/?lang=en-in">Twitter</a></p>
+                    <p><a target="_blank" href="https://vsco.co/stayinganand/gallery">Vsco</a></p>
                 </div>
                 <div class="essentials socials">
                     <p>
@@ -691,7 +692,8 @@
     </div>
     <noscript>Oops! why is your javascript disabled?</noscript>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="script/home.js"></script>
     <script src="script/TagCloud.min.js"></script>
     <script>
@@ -707,8 +709,8 @@
         // Globe 1
         var tagCloud1 = TagCloud('.content1', myTags, {
             radius: 275,
-            maxSpeed: 'fast',
-            initSpeed: 'normal',
+            maxSpeed: 'normal',
+            initSpeed: 'slow',
             direction: 135,
             keep: true
 
@@ -716,8 +718,8 @@
         // Globe 2
         var tagCloud2 = TagCloud('.content2', myTags, {
             radius: 200,
-            maxSpeed: 'fast',
-            initSpeed: 'normal',
+            maxSpeed: 'normal',
+            initSpeed: 'slow',
             direction: 135,
             keep: true
 

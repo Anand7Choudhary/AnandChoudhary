@@ -76,21 +76,38 @@ if (sessionStorage.getItem("reloadCount") == 1 || sessionStorage.getItem("showLo
 }
 
 // nav scroll
-
-// let preSvcrollpos = window.pageYOffset;
-
-// window.addEventListener("scroll", function () {
-//     let currentScrollPos = window.pageYOffset;
-//     if (preSvcrollpos > currentScrollPos) {
-//         console.log("show");
-//         document.querySelector(".mainBody .nav").classList.add("visible");
-//     } else {
-//         console.log("hide");
-//         document.querySelector(".mainBody .nav").classList.remove("visible");
-//     }
-
-//     preSvcrollpos = currentScrollPos;
-// });
+$(document).ready(function () {
+    $('.nav').find('a').on("click", function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            var offset = $(hash).offset().top; // subtract 72 from the offset value
+            $("html, body").animate({
+                    scrollTop: offset, // use the updated offset value
+                },
+                800,
+                function () {
+                    window.location.hash = hash; // set the hash to the original value (without subtracting 72)
+                }
+            );
+        }
+    });
+    $('.footerNav').find('a').on("click", function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            var offset = $(hash).offset().top; // subtract 72 from the offset value
+            $("html, body").animate({
+                    scrollTop: offset, // use the updated offset value
+                },
+                800,
+                function () {
+                    window.location.hash = hash; // set the hash to the original value (without subtracting 72)
+                }
+            );
+        }
+    });
+});
 
 
 
