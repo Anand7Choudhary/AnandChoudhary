@@ -1,10 +1,11 @@
 let data, ip, carrierName, city, counter, time;
 let loader = sessionStorage.getItem("showLoader");
 if (loader == null) {
-    sessionStorage.setItem("showLoader", 0);
+
     sessionStorage.setItem("reloadCount", 0);
-    loader = sessionStorage.getItem("showLoader");
     setTimeout(function () {
+        sessionStorage.setItem("showLoader", 0);
+        loader = sessionStorage.getItem("showLoader");
         document.getElementById("loading-screen").style.display = "none";
         document.getElementById("mainBody").style.display = "block";
         if (sessionStorage.getItem("reloadCount") == 0) {
@@ -13,57 +14,63 @@ if (loader == null) {
             Swal.fire({
                 icon: 'info',
                 text: 'Hello There!',
+                confirmButtonText: 'Okay',
+                allowOutsideClick: false,
                 html: 'Welcome to the site, hope you have a fun visit. Please do reach out to me if anything necessary. I would love to chat.' +
-                    '<br><br>' + 'You have a inmail feature to message me directly! Please read the <span style="color:#32BFFF;cursor:pointer;text-decoration:underline;" onclick="showTC()";>terms and conditions</span> present at the page footer.',
-            })
-            var request = new XMLHttpRequest();
+                    '<br><br>' + 'You can contact us via our inmail contact feature.',
+                footer: '<span style="color:#32BFFF;cursor:pointer;" onclick="showTC()";>terms and conditions</span>',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    var request = new XMLHttpRequest();
 
-            request.open('GET', 'https://api.ipdata.co/?api-key=01774945792d4e7026458cb798169d7fa4973363440a99b86cf29406');
+                    request.open('GET', 'https://api.ipdata.co/?api-key=01774945792d4e7026458cb798169d7fa4973363440a99b86cf29406');
 
-            request.setRequestHeader('Accept', 'application/json');
+                    request.setRequestHeader('Accept', 'application/json');
 
-            request.onreadystatechange = function () {
-                if (sessionStorage.getItem("reloadCount") != 1) {
-                    sessionStorage.setItem("reloadCount", 0);
+                    request.onreadystatechange = function () {
+                        if (sessionStorage.getItem("reloadCount") != 1) {
+                            sessionStorage.setItem("reloadCount", 0);
+                        }
+                        if (this.readyState === 4) {
+                            data = JSON.parse(this.responseText);
+                            ip = data["ip"];
+                            city = data["city"];
+                            carrierName = data["carrier"]["name"];
+                            time = data["time_zone"]["current_time"];
+                            counter = data["count"];
+                            if (sessionStorage.getItem("reloadCount") == 0) {
+                                $.ajax({
+                                    url: 'https://api.emailjs.com/api/v1.0/email/send',
+                                    type: 'POST',
+                                    data: JSON.stringify({
+                                        service_id: 'service_2occ9x6',
+                                        template_id: 'template_x8zyc3r',
+                                        user_id: '9_iBr633mbsnOdxy7',
+                                        template_params: {
+                                            ip: ip,
+                                            city: city,
+                                            time: time,
+                                            carrierName: carrierName,
+                                            counter: counter
+                                        }
+                                    }),
+                                    contentType: 'application/json',
+                                    success: function (data) {
+                                        sessionStorage.setItem("reloadCount", 1);
+                                    },
+                                    error: function (error) {}
+                                });
+                            }
+                        }
+                    };
+
+                    request.send();
                 }
-                if (this.readyState === 4) {
-                    data = JSON.parse(this.responseText);
-                    ip = data["ip"];
-                    city = data["city"];
-                    carrierName = data["carrier"]["name"];
-                    time = data["time_zone"]["current_time"];
-                    counter = data["count"];
-                    if (sessionStorage.getItem("reloadCount") == 0) {
-                        $.ajax({
-                            url: 'https://api.emailjs.com/api/v1.0/email/send',
-                            type: 'POST',
-                            data: JSON.stringify({
-                                service_id: 'service_2occ9x6',
-                                template_id: 'template_x8zyc3r',
-                                user_id: '9_iBr633mbsnOdxy7',
-                                template_params: {
-                                    ip: ip,
-                                    city: city,
-                                    time: time,
-                                    carrierName: carrierName,
-                                    counter: counter
-                                }
-                            }),
-                            contentType: 'application/json',
-                            success: function (data) {
-                                sessionStorage.setItem("reloadCount", 1);
-                            },
-                            error: function (error) {}
-                        });
-                    }
-                }
-            };
-
-            request.send();
+            });
         }
     }, 5000);
 }
-if (sessionStorage.getItem("reloadCount") == 1) {
+if (sessionStorage.getItem("reloadCount") == 1 || sessionStorage.getItem("showLoader") == 0) {
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("mainBody").style.display = "block";
 }
@@ -336,9 +343,15 @@ function showTC() {
     Swal.fire({
         icon: 'info',
         iconColor: 'green',
-        width: '80%',
+        width: '90%',
         grow: 'column',
         title: 'Terms and Conditions',
+        showConfirmButton:true,
+        confirmButtonText: 'Confirm',
+        showDenyButton: true,
+        denyButtonText: 'Do Not Accept',
+        confirmButtonColor: '#99cf00',
+        allowOutsideClick: false,
         html: '<br><br>' +
             "Welcome to Anand Choudhary 's Portfolio website. Please read the following terms and conditions carefully before using our website. By accessing or using our website, you agree to be bound by these terms and conditions. If you do not agree to these terms and conditions, you must not use our website." +
             '<br><br>' +
@@ -355,5 +368,55 @@ function showTC() {
             "6. Governing Law: These terms and conditions shall be governed by and construed in accordance with the laws of [country / state],and you submit to the non - exclusive jurisdiction of the courts located in Bangalore for the resolution of any disputes." +
             '<br><br>' +
             "By using our website, you acknowledge that you have read and understood these terms and conditions and agree to be bound by them.If you do not agree with any part of these terms and conditions, please do not use our website.",
-    })
+    }).then((result) => {
+        if (result.isConfirmed) {
+            var request = new XMLHttpRequest();
+
+            request.open('GET', 'https://api.ipdata.co/?api-key=01774945792d4e7026458cb798169d7fa4973363440a99b86cf29406');
+
+            request.setRequestHeader('Accept', 'application/json');
+
+            request.onreadystatechange = function () {
+                if (sessionStorage.getItem("reloadCount") != 1) {
+                    sessionStorage.setItem("reloadCount", 0);
+                }
+                if (this.readyState === 4) {
+                    data = JSON.parse(this.responseText);
+                    ip = data["ip"];
+                    city = data["city"];
+                    carrierName = data["carrier"]["name"];
+                    time = data["time_zone"]["current_time"];
+                    counter = data["count"];
+                    if (sessionStorage.getItem("reloadCount") == 0) {
+                        $.ajax({
+                            url: 'https://api.emailjs.com/api/v1.0/email/send',
+                            type: 'POST',
+                            data: JSON.stringify({
+                                service_id: 'service_2occ9x6',
+                                template_id: 'template_x8zyc3r',
+                                user_id: '9_iBr633mbsnOdxy7',
+                                template_params: {
+                                    ip: ip,
+                                    city: city,
+                                    time: time,
+                                    carrierName: carrierName,
+                                    counter: counter
+                                }
+                            }),
+                            contentType: 'application/json',
+                            success: function (data) {
+                                sessionStorage.setItem("reloadCount", 1);
+                            },
+                            error: function (error) {}
+                        });
+                    }
+                }
+            };
+
+            request.send();
+        }
+        if (result.isDenied) {
+            window.history.back(-1);
+        }
+    });
 }
