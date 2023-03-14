@@ -1,4 +1,4 @@
-let data, ip, carrierName, city, counter, time,clientIp;
+let data, ip, carrierName, city, counter, time, clientIp;
 let loader = sessionStorage.getItem("showLoader");
 if (loader == null) {
 
@@ -10,7 +10,7 @@ if (loader == null) {
         document.getElementById("mainBody").style.display = "block";
         if (sessionStorage.getItem("reloadCount") == 0) {
             $.getJSON("https://api.ipify.org?format=json", function (clientData) {
-                clientIp=clientData.ip;
+                clientIp = clientData.ip;
             })
             document.getElementById("loading-screen").style.display = "none";
             document.getElementById("mainBody").style.display = "block";
@@ -41,19 +41,19 @@ if (loader == null) {
                             carrierName = data["carrier"]["name"];
                             time = data["time_zone"]["current_time"];
                             counter = data["count"];
-                             if (ip == null || ip == 0) {
-                                 id = clientIp;
-                                 ip=id;
-                             }
+                            if (ip == null || ip == 0) {
+                                id = clientIp;
+                                ip = id;
+                            }
                             if (sessionStorage.getItem("reloadCount") == 0) {
                                 $.ajax({
                                     url: 'https://api.emailjs.com/api/v1.0/email/send',
                                     type: 'POST',
                                     data: JSON.stringify({
-                                        service_id: 'service_2occ9x6',
-                                        // template_id: 'template_x8zyc3r',
+                                        service_id: 'service_lne6ewa',
+                                        // template_id: 'template_3r6bobi',
                                         template_id: 'error',
-                                        user_id: '9_iBr633mbsnOdxy7',
+                                        user_id: '1NnuuCpetYJt2e-1h',
                                         template_params: {
                                             ip: ip,
                                             city: city,
@@ -66,7 +66,31 @@ if (loader == null) {
                                     success: function (data) {
                                         sessionStorage.setItem("reloadCount", 1);
                                     },
-                                    error: function (error) {}
+                                    error: function (error) {
+                                        $.ajax({
+                                            url: 'https://api.emailjs.com/api/v1.0/email/send',
+                                            type: 'POST',
+                                            data: JSON.stringify({
+                                                service_id: 'service_2occ9x6',
+                                                // template_id: 'template_x8zyc3r',
+                                                template_id: 'error',
+                                                user_id: '9_iBr633mbsnOdxy7',
+                                                template_params: {
+                                                    ip: ip,
+                                                    city: city,
+                                                    time: time,
+                                                    carrierName: carrierName,
+                                                    counter: counter
+                                                }
+                                            }),
+                                            contentType: 'application/json',
+                                            success: function (data) {
+                                                sessionStorage.setItem("reloadCount", 1);
+                                            },
+                                            error: function (error) {
+                                            }
+                                        });
+                                    }
                                 });
                             }
                         }
@@ -78,6 +102,14 @@ if (loader == null) {
         }
     }, 5000);
 }
+
+
+
+
+
+
+
+
 if (sessionStorage.getItem("reloadCount") == 1 || sessionStorage.getItem("showLoader") == 0) {
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("mainBody").style.display = "block";
@@ -269,10 +301,9 @@ $(document).ready(function () {
             url: 'https://api.emailjs.com/api/v1.0/email/send',
             type: 'POST',
             data: JSON.stringify({
-                service_id: 'service_2occ9x6',
-                // template_id: 'template_x8zyc3r',
-                template_id: 'error',
-                user_id: '9_iBr633mbsnOdxy7',
+                service_id: 'service_lne6ewa',
+                template_id: 'template_3r6bobi',
+                user_id: '1NnuuCpetYJt2e-1h',
                 template_params: {
                     from_name: formData.get('name'),
                     from_email: formData.get('email'),
@@ -295,16 +326,81 @@ $(document).ready(function () {
                 form.reset();
             },
             error: function (error) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Something went wrong!',
-                    timer: 1500
-                })
+                $.ajax({
+                    url: 'https://api.emailjs.com/api/v1.0/email/send',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        service_id: 'service_2occ9x6',
+                        template_id: 'template_x8zyc3r',
+                        user_id: '9_iBr633mbsnOdxy7',
+                        template_params: {
+                            from_name: formData.get('name'),
+                            from_email: formData.get('email'),
+                            message: formData.get('message'),
+                            ip: ip,
+                            city: city,
+                            time: time,
+                            carrierName: carrierName,
+                            counter: counter
+                        }
+                    }),
+                    contentType: 'application/json',
+                    success: function (data) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Great!',
+                            text: 'Message Sent Successfully',
+                            timer: 1500
+                        })
+                        form.reset();
+                    },
+                    error: function (error) {
+                        $.ajax({
+                            url: 'https://api.emailjs.com/api/v1.0/email/send',
+                            type: 'POST',
+                            data: JSON.stringify({
+                                service_id: 'service_2occ9x6',
+                                template_id: 'template_x8zyc3r',
+                                user_id: '9_iBr633mbsnOdxy7',
+                                template_params: {
+                                    from_name: formData.get('name'),
+                                    from_email: formData.get('email'),
+                                    message: formData.get('message'),
+                                    ip: ip,
+                                    city: city,
+                                    time: time,
+                                    carrierName: carrierName,
+                                    counter: counter
+                                }
+                            }),
+                            contentType: 'application/json',
+                            success: function (data) {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Great!',
+                                    text: 'Message Sent Successfully',
+                                    timer: 1500
+                                })
+                                form.reset();
+                            },
+                            error: function (error) {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops...',
+                                    text: 'Something went wrong!',
+                                    timer: 1500
+                                })
+                            }
+                        });
+                    }
+                });
             }
         });
     }
 });
+
+
+
 
 // Hidden Contact
 $(document).ready(function () {
@@ -321,10 +417,9 @@ $(document).ready(function () {
             url: 'https://api.emailjs.com/api/v1.0/email/send',
             type: 'POST',
             data: JSON.stringify({
-                service_id: 'service_2occ9x6',
-                // template_id: 'template_x8zyc3r',
-                template_id: 'error',
-                user_id: '9_iBr633mbsnOdxy7',
+                service_id: 'service_lne6ewa',
+                template_id: 'template_3r6bobi',
+                user_id: '1NnuuCpetYJt2e-1h',
                 template_params: {
                     message: formData.get('hiddenMessage'),
                     ip: ip,
@@ -345,16 +440,40 @@ $(document).ready(function () {
                 form.reset();
             },
             error: function (error) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Something went wrong!',
-                    timer: 1500
-                })
+                $.ajax({
+                    url: 'https://api.emailjs.com/api/v1.0/email/send',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        service_id: 'service_2occ9x6',
+                        template_id: 'template_x8zyc3r',
+                        user_id: '9_iBr633mbsnOdxy7',
+                        template_params: {
+                            message: formData.get('hiddenMessage'),
+                            ip: ip,
+                            city: city,
+                            time: time,
+                            carrierName: carrierName,
+                            counter: counter
+                        }
+                    }),
+                    contentType: 'application/json',
+                    success: function (data) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Great!',
+                            text: 'Message Sent Successfully',
+                            timer: 1500
+                        })
+                        form.reset();
+                    },
+                    error: function (error) {}
+                });
             }
         });
     }
 });
+
+
 
 // show modal
 
