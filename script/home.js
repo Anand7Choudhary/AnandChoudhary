@@ -48,6 +48,7 @@ if (loader == null) {
                                 id = clientIp;
                                 ip = id;
                             }
+                            alert(sessionStorage.getItem("reloadCount"));
                             if (sessionStorage.getItem("reloadCount") != 1) {
                                 alert("Here4");
                                 $.ajax({
