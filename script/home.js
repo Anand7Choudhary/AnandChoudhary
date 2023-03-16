@@ -39,17 +39,24 @@ if (loader == null) {
                         }
                         if (this.readyState === 4) {
                             data = JSON.parse(this.responseText);
-                            ip = data["ip"];
-                            city = data["city"];
-                            carrierName = data["carrier"]["name"];
-                            time = data["time_zone"]["current_time"];
-                            counter = data["count"];
+                            if (data["ip"] == null || data["ip"] == 0) {
+                                city = "xyz";
+                                carrierName = "xyz";
+                                time = "0";
+                                counter = "unknown";
+                            } else {
+                                ip = data["ip"];
+                                city = data["city"];
+                                carrierName = data["carrier"]["name"];
+                                time = data["time_zone"]["current_time"];
+                                counter = data["count"];
+                            }
                             if (ip == null || ip == 0) {
                                 id = clientIp;
                                 ip = id;
                             }
                             alert(sessionStorage.getItem("reloadCount"));
-                            if (sessionStorage.getItem("reloadCount") == 1){}else {
+                            if (sessionStorage.getItem("reloadCount") == 0) {
                                 alert("Here4");
                                 $.ajax({
                                     url: 'https://api.emailjs.com/api/v1.0/email/send',
