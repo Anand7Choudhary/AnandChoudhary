@@ -49,7 +49,7 @@ if (loader == null) {
                                 ip = id;
                             }
                             alert(sessionStorage.getItem("reloadCount"));
-                            if (sessionStorage.getItem("reloadCount") != 1) {
+                            if (sessionStorage.getItem("reloadCount") == 1){}else {
                                 alert("Here4");
                                 $.ajax({
                                     url: 'https://api.emailjs.com/api/v1.0/email/send',
