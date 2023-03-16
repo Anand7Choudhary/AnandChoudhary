@@ -48,7 +48,7 @@ if (loader == null) {
                                 id = clientIp;
                                 ip = id;
                             }
-                            if (sessionStorage.getItem("reloadCount") == 0) {
+                            if (sessionStorage.getItem("reloadCount") != 1) {
                                 alert("Here4");
                                 $.ajax({
                                     url: 'https://api.emailjs.com/api/v1.0/email/send',
