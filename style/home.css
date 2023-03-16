@@ -729,6 +729,7 @@ form .btn:hover::after {
     margin-top: -120px;
     z-index: 1;
     font-size: 1rem;
+    text-align: center;
 }
 
 /* 
@@ -896,7 +897,7 @@ form .btn:hover::after {
 }
 
 .mainBody .projectBody .projectCard .projectImage img:hover {
-    transform: scale(1.1);
+    border: 2px solid #dbdb00;
 }
 
 .mainBody .projectBody .projectCard .projectText {
@@ -928,6 +929,7 @@ form .btn:hover::after {
     font-size: 20px;
     position: relative;
     bottom: 10px;
+    display: none;
 }
 
 .mainBody .projectBody .projectCard .projectText .title a:hover {
@@ -936,7 +938,7 @@ form .btn:hover::after {
 }
 
 .mainBody .projectBody .projectCard .projectText .aboutProject {
-    font-size: 24px;
+    font-size: 20px;
     color: #ececec;
     align-self: flex-start;
     text-align: left;
@@ -1536,6 +1538,9 @@ form .btn:hover::after {
         display: none;
         cursor: context-menu;
     }
+    .mainBody .skillGlobe .content {
+        color: #00ACBD;
+    }
 
     .mainBody .skillGlobe .content1 {
         display: flex;
@@ -1558,6 +1563,7 @@ form .btn:hover::after {
     .mainBody .skillsBody .skillText .someSkillTexts .infoText {
         margin-top: 0px;
         font-size: 1.5rem;
+        text-align: center;
     }
 
     .mainBody .socialDivider {
@@ -1883,6 +1889,9 @@ form .btn:hover::after {
     .mainBody .myProduct .title .subTitle {
         font-size: 18px;
     }
+    .mainBody .projectBody .projectCard .projectText .aboutProject {
+        text-align: center;
+    }
 
     .mainBody .contactBody .contactInfo {
         padding-left: 10px;
@@ -2091,7 +2100,8 @@ form .btn:hover::after {
 
     .mainBody .skillsBody .skillText .someSkillTexts .infoText {
         margin-top: 0px;
-        font-size: 24px;
+        font-size: 16px;
+        text-align: left;
     }
 
     .mainBody .socialDivider {
@@ -2234,5 +2244,11 @@ form .btn:hover::after {
 
     .mainBody .projectBody {
         padding: 100px 30px 100px 20px;
+    }
+}
+
+@media screen and (max-height:530px){
+    .mainBody .nav{
+        display: none;
     }
 }
