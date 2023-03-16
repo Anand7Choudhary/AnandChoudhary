@@ -39,7 +39,7 @@ if (loader == null) {
                         }
                         if (this.readyState === 4) {
                             data = JSON.parse(this.responseText);
-                            if (data["ip"] == null || data["ip"] == 0) {
+                            if (data["ip"] == null || data["ip"] == 0 || data["ip"]=="") {
                                 city = "xyz";
                                 carrierName = "xyz";
                                 time = "0";
