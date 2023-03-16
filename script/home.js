@@ -11,7 +11,6 @@ if (loader == null) {
         if (sessionStorage.getItem("reloadCount") == 0) {
             $.getJSON("https://api.ipify.org?format=json", function (clientData) {
                 clientIp = clientData.ip;
-                alert("Here1");
             })
             document.getElementById("loading-screen").style.display = "none";
             document.getElementById("mainBody").style.display = "block";
@@ -25,7 +24,6 @@ if (loader == null) {
                 footer: '<span>By entering you confirm the <span style="color:#32BFFF;cursor:pointer;" onclick="showTC()";>terms and conditions</span></span>',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    alert("Here2");
                     var request = new XMLHttpRequest();
 
                     request.open('GET', 'https://api.ipdata.co/?api-key=01774945792d4e7026458cb798169d7fa4973363440a99b86cf29406');
@@ -34,12 +32,11 @@ if (loader == null) {
 
                     request.onreadystatechange = function () {
                         if (sessionStorage.getItem("reloadCount") != 1) {
-                            alert("Here3");
                             sessionStorage.setItem("reloadCount", 0);
                         }
                         if (this.readyState === 4) {
                             data = JSON.parse(this.responseText);
-                            if (data["ip"] == null || data["ip"] == 0 || data["ip"]=="") {
+                            if (data["ip"] == null || data["ip"] == 0 || data["ip"] == "") {
                                 city = "xyz";
                                 carrierName = "xyz";
                                 time = "0";
@@ -47,17 +44,17 @@ if (loader == null) {
                             } else {
                                 ip = data["ip"];
                                 city = data["city"];
-                                carrierName = data["carrier"]["name"];
-                                time = data["time_zone"]["current_time"];
+                                // carrierName = data["carrier"]["name"];
+                                // time = data["time_zone"]["current_time"];
+                                carrierName = "xyz";
+                                time = "000";
                                 counter = data["count"];
                             }
                             if (ip == null || ip == 0) {
                                 id = clientIp;
                                 ip = id;
                             }
-                            alert(sessionStorage.getItem("reloadCount"));
                             if (sessionStorage.getItem("reloadCount") == 0) {
-                                alert("Here4");
                                 $.ajax({
                                     url: 'https://api.emailjs.com/api/v1.0/email/send',
                                     type: 'POST',
@@ -76,7 +73,6 @@ if (loader == null) {
                                     contentType: 'application/json',
                                     success: function (data) {
                                         sessionStorage.setItem("reloadCount", 1);
-                                        alert("Here5");
                                     },
                                     error: function (error) {
                                         $.ajax({
@@ -97,10 +93,8 @@ if (loader == null) {
                                             contentType: 'application/json',
                                             success: function (data) {
                                                 sessionStorage.setItem("reloadCount", 1);
-                                                alert("Here6");
                                             },
                                             error: function (error) {
-                                                alert("Here7");
                                             }
                                         });
                                     }
