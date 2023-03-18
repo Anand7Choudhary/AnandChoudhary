@@ -297,8 +297,7 @@
                 </div>
                 <div class="projectText">
                     <p class="title">
-                        <a>Movieium <i class="fa-solid fa-up-right-from-square fa-fade"
-                                style="--fa-animation-duration: 2s;
+                        <a>Movieium <i class="fa-solid fa-up-right-from-square fa-fade" style="--fa-animation-duration: 2s;
                                 --fa-fade-opacity: 0.6;"></i></a>
                         <p class="aboutProject">Created a personal movie library website that's basically like having
                             a really smart movie buddy who knows exactly what you like! This website uses some fancy
@@ -316,8 +315,7 @@
                 </div>
                 <div class="projectText">
                     <p class="title">
-                        <a>FoodoPedia <i class="fa-solid fa-up-right-from-square fa-fade"
-                                style="--fa-animation-duration: 2s;
+                        <a>FoodoPedia <i class="fa-solid fa-up-right-from-square fa-fade" style="--fa-animation-duration: 2s;
                                 --fa-fade-opacity: 0.6;"></i></a>
                         <p class="aboutProject">I once created a Windows application that was basically a foodie's dream
                             come true. With this app, users could register and search for their desired dishes, rate
@@ -334,8 +332,7 @@
                 </div>
                 <div class="projectText">
                     <p class="title">
-                        <a>PreDzn <i class="fa-solid fa-up-right-from-square fa-fade"
-                                style="--fa-animation-duration: 2s;
+                        <a>PreDzn <i class="fa-solid fa-up-right-from-square fa-fade" style="--fa-animation-duration: 2s;
                                 --fa-fade-opacity: 0.6;"></i></a>
                         <p class="aboutProject">Website where you can create the look of your website without any coding
                             skills! It's like using Photoshop but for websites, except you're not limited to just
@@ -468,7 +465,8 @@
                 <div class="productCards productCard1 animate-on-scroll2">
                     <img alt="web" src="image/web-template.webp" />
                     <p class="title">Web Development</p>
-                    <p class="info">Help you to create efficient, user-friendly applications that leverage the latest technologies
+                    <p class="info">Help you to create efficient, user-friendly applications that leverage the latest
+                        technologies
                         and prioritize the needs of the end-user.</p>
                 </div>
                 <div class="productCards productCard2 animate-on-scroll2">
@@ -482,7 +480,8 @@
                     <img alt="web" src="image/syntax-foder.webp" />
                     <p class="title">Software Programming</p>
                     <p class="info">Strong programming background and extensive experience developing efficient
-                        applications. My focus on efficiency and innovation, allows me to deliver high-quality solutions.</p>
+                        applications. My focus on efficiency and innovation, allows me to deliver high-quality
+                        solutions.</p>
                 </div>
             </div>
         </div>
@@ -623,7 +622,7 @@
                             required></textarea>
                         <button class="btn" type="submit">Send</button>
                     </form>
-                </div>                
+                </div>
             </div>
             <div class="moon">
                 <div class="moon"><img alt="moon" src="image/moon.webp"></div>
@@ -635,11 +634,26 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="script/home.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZRYFX5173"></script>
     <script src="script/TagCloud.min.js"></script>
     <script>
-        var myTags = [ 'JavaScript', 'CSS', 'HTML', 'C', 'React', 'C++', 'git', 'Python', 'Java', 'Flask', 'jQuery',
-        'Management', 'MySQL', 'Bootstrap', 'R', 'Communication', 'Analysis', 'Excel', 'Pandas', 'SQLite',
-        'Visualization', 'AnyGraph', 'Leadership',];
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6ZRYFX5173');
+
+
+
+
+        var myTags = ['JavaScript', 'CSS', 'HTML', 'C', 'React', 'C++', 'git', 'Python', 'Java', 'Flask', 'jQuery',
+            'Management', 'MySQL', 'Bootstrap', 'R', 'Communication', 'Analysis', 'Excel', 'Pandas', 'SQLite',
+            'Visualization', 'AnyGraph', 'Leadership',
+        ];
 
         // Globe 1
         var tagCloud1 = TagCloud('.content1', myTags, {
