@@ -45,20 +45,31 @@
     </div>
   </div>
   <noscript>Oops!! Why is your Javascript disabled?</noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZRYFX5173"></script>
   <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6ZRYFX5173');
+
+
     if (document.getElementById('body')) {
       sessionStorage.removeItem("showLoader");
     }
     let nameLetter = document.querySelectorAll(".nameLetters");
     nameLetter.forEach(letter => {
       letter.addEventListener('mouseover', function () {
-        let animationName=window.getComputedStyle(letter).getPropertyValue("animation-name");
-        if(animationName!="rubberBand"){
-          letter.style.animationName="rubberBand";
+        let animationName = window.getComputedStyle(letter).getPropertyValue("animation-name");
+        if (animationName != "rubberBand") {
+          letter.style.animationName = "rubberBand";
         }
       });
-      letter.addEventListener('animationend', function() {
-      letter.style.animationName = "none";
+      letter.addEventListener('animationend', function () {
+        letter.style.animationName = "none";
       });
     });
   </script>
