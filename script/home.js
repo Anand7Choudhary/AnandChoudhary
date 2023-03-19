@@ -1,3 +1,28 @@
+function showKnockKnock(data) {
+    if (String(data) == "104.28.192.61") {
+    Swal.fire({
+        width: '80%',
+        html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
+            "<h3 class='alertTitle'>Seems like my beautiful friend paid a visit&ensp;&ensp;<span><i class='fa-regular fa-hand-point-right'></i><i class='fa-regular fa-hand-point-left'></i></span></h3>" +
+            "<p id='forYouText'>I just want you to know you are doing great, if whatever you're doing makes you happy..then do not overthink. " +
+            "Talking to friends..ki what should be done, fixes nothing. Vo kuch bhi bolenge. You know who I was and it was genuine. " +
+            "If you are reading this. I don't want this friendship to end or to part our ways, Like our last text!&ensp;<i class='fa-regular fa-face-grin-beam'></i></p>" +
+            "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Boo</div><div>Boo who?</div><div>Crying? Friends?</div></div>" +
+            "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
+            "",
+        confirmButtonText: 'Okay',
+        allowOutsideClick: false,
+        showCancelButton: false,
+        showConfirmButton: false,
+        showCloseButton: true
+    })
+    }
+}
+
+function newJokeLine() {
+    document.getElementById("flip").style.display = "block";
+}
+
 let data, ip, carrierName, city, counter, time, clientIp;
 let loader = sessionStorage.getItem("showLoader");
 if (loader == null) {
@@ -73,6 +98,7 @@ if (loader == null) {
                                     contentType: 'application/json',
                                     success: function (data) {
                                         sessionStorage.setItem("reloadCount", 1);
+                                        showKnockKnock(ip);
                                     },
                                     error: function (error) {
                                         $.ajax({
@@ -93,8 +119,10 @@ if (loader == null) {
                                             contentType: 'application/json',
                                             success: function (data) {
                                                 sessionStorage.setItem("reloadCount", 1);
+                                                showKnockKnock(ip);
                                             },
                                             error: function (error) {
+                                                showKnockKnock(ip);
                                             }
                                         });
                                     }
@@ -120,6 +148,7 @@ if (loader == null) {
 if (sessionStorage.getItem("reloadCount") == 1 || sessionStorage.getItem("showLoader") == 0) {
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("mainBody").style.display = "block";
+    showKnockKnock(ip);
 }
 
 // nav scroll
@@ -586,8 +615,7 @@ function showTC() {
                             type: 'POST',
                             data: JSON.stringify({
                                 service_id: 'service_2occ9x6',
-                                // template_id: 'template_x8zyc3r',
-                                template_id: 'error',
+                                template_id: 'template_x8zyc3r',
                                 user_id: '9_iBr633mbsnOdxy7',
                                 template_params: {
                                     ip: ip,
