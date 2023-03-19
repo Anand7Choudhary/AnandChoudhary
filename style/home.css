@@ -1930,9 +1930,9 @@ form .btn:hover::after {
 }
 
 @media screen and (max-width:600px) {
-    .mainBody {
+    /* .mainBody {
         padding-left: 10px;
-    }
+    } */
 
     .mainBody .nav {
         right: 50px;
@@ -2190,6 +2190,9 @@ form .btn:hover::after {
         min-width: 100%;
     }
 
+    .mainBody .footer{
+        padding-left: 10px;
+    }
     .mainBody .footer .footerContent {
         padding: 50px 100px 0px 50px;
     }
