@@ -1,8 +1,9 @@
 /* sweetAlert2 */
 .swal2-html-container {
     text-align: justify !important;
-    padding:0 40px;
+    padding: 0 40px;
 }
+
 .lineUp {
     opacity: 1;
     animation: 1s anim-lineUp ease-out forwards;
@@ -71,6 +72,7 @@ form .btn::after {
     transition: .4s ease;
     z-index: -1;
 }
+
 form .btn:hover::after {
     height: 100%;
     transition-delay: 0.4s;
@@ -139,7 +141,7 @@ form .btn:hover::after {
     font-family: 'Comfortaa', cursive;
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Oswald',sans-serif; */
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 .mainBody .nav {
@@ -167,19 +169,21 @@ form .btn:hover::after {
     color: #ffe600;
     transition: all 0.15s ease-in-out;
     /* background-color: rgb(0, 0, 255); */
-        padding: 20px 0px;
+    padding: 20px 0px;
     transform-origin: center;
 }
-.mainBody .nav p a{
+
+.mainBody .nav p a {
     padding: 20px 0px;
     color: #ffe600;
     text-decoration: none;
 }
+
 /* .mainBody .nav p:hover {
     transform: rotate(-90deg) scale(1.15); 
     font-weight: bold;
 } */
-.mainBody .nav .hovered{
+.mainBody .nav .hovered {
     transform: rotate(-90deg) scale(1.15);
     font-weight: bold;
 }
@@ -216,7 +220,8 @@ form .btn:hover::after {
     height: fit-content;
     border: 2px solid rgba(255, 255, 255, 0.18);
 }
-.mainBody .floatingDivs .nameSign:hover{
+
+.mainBody .floatingDivs .nameSign:hover {
     border: 2px solid #dbc500;
 }
 
@@ -1320,7 +1325,7 @@ form .btn:hover::after {
     overflow-x: hidden;
     /* text-align: center; */
     color: #ececec;
-    padding:0 10px;
+    padding: 0 10px;
 }
 
 .mainBody .footer .footerContent .hiddenText form {
@@ -1357,39 +1362,45 @@ form .btn:hover::after {
     cursor: pointer;
     border: 1px solid #a49400;
 }
-.mainBody .footer .footerContent .hiddenText form button:hover{
+
+.mainBody .footer .footerContent .hiddenText form button:hover {
     color: #000000;
 }
+
 .mainBody .footer .footerContent .socials,
-.mainBody .footer .footerContent .footerNav{
+.mainBody .footer .footerContent .footerNav {
     width: 300px;
     height: 100%;
     position: relative;
 }
+
 .mainBody .footer .footerContent .socials p,
-.mainBody .footer .footerContent .footerNav p{
+.mainBody .footer .footerContent .footerNav p {
     color: #707070;
     margin-top: 15px;
     transition: all 0.25s linear;
 }
+
 .mainBody .footer .footerContent .socials p a,
-.mainBody .footer .footerContent .footerNav p a{
+.mainBody .footer .footerContent .footerNav p a {
     color: #909090;
     transition: all 0.05s linear;
     text-decoration: none;
 }
+
 .mainBody .footer .footerContent .socials p a:hover,
-.mainBody .footer .footerContent .footerNav p a:hover{
-    color:white;
+.mainBody .footer .footerContent .footerNav p a:hover {
+    color: white;
     transform: scale(1.01);
 }
+
 .mainBody .footer .footerContent .socials p:first-child,
-.mainBody .footer .footerContent .footerNav p:first-child{
+.mainBody .footer .footerContent .footerNav p:first-child {
     margin: 0;
     margin-bottom: 50px;
     position: relative;
     /* top:-7px; */
-    color:#ececec;
+    color: #ececec;
 }
 
 
@@ -1538,6 +1549,7 @@ form .btn:hover::after {
         display: none;
         cursor: context-menu;
     }
+
     .mainBody .skillGlobe .content {
         color: #00ACBD;
     }
@@ -1608,16 +1620,20 @@ form .btn:hover::after {
     .mainBody .contactBody .floating {
         display: none;
     }
-    .mainBody .footer .footerContent{
-        padding:50px 100px 0px 50px;
+
+    .mainBody .footer .footerContent {
+        padding: 50px 100px 0px 50px;
     }
-    .mainBody .footer .footerContent .hiddenText{
+
+    .mainBody .footer .footerContent .hiddenText {
         width: 100%;
     }
-    .mainBody .footer .footerContent .hiddenText form{
+
+    .mainBody .footer .footerContent .hiddenText form {
         width: 50%;
     }
-    .mainBody .footer .footerContent .hiddenText form textarea{
+
+    .mainBody .footer .footerContent .hiddenText form textarea {
         min-width: 100%;
         max-width: 100%;
     }
@@ -1889,6 +1905,7 @@ form .btn:hover::after {
     .mainBody .myProduct .title .subTitle {
         font-size: 18px;
     }
+
     .mainBody .projectBody .projectCard .projectText .aboutProject {
         text-align: center;
     }
@@ -1906,15 +1923,17 @@ form .btn:hover::after {
         max-width: 400px;
         min-width: 400px;
     }
-    .mainBody .footer .footerContent .hiddenText form{
+
+    .mainBody .footer .footerContent .hiddenText form {
         width: 100%;
     }
 }
 
 @media screen and (max-width:600px) {
-    .mainBody{
+    .mainBody {
         padding-left: 10px;
     }
+
     .mainBody .nav {
         right: 50px;
         gap: 20px;
@@ -2170,16 +2189,20 @@ form .btn:hover::after {
         max-width: 100%;
         min-width: 100%;
     }
-    .mainBody .footer .footerContent{
-        padding:50px 100px 0px 50px;
+
+    .mainBody .footer .footerContent {
+        padding: 50px 100px 0px 50px;
     }
-    .mainBody .footer .footerContent .hiddenText{
+
+    .mainBody .footer .footerContent .hiddenText {
         width: 100%;
     }
-    .mainBody .footer .footerContent .hiddenText form{
+
+    .mainBody .footer .footerContent .hiddenText form {
         width: 100%;
     }
-    .mainBody .footer .footerContent .hiddenText form textarea{
+
+    .mainBody .footer .footerContent .hiddenText form textarea {
         min-width: 100%;
         max-width: 100%;
     }
@@ -2247,8 +2270,166 @@ form .btn:hover::after {
     }
 }
 
-@media screen and (max-height:530px){
-    .mainBody .nav{
+@media screen and (max-height:530px) {
+    .mainBody .nav {
         display: none;
+    }
+}
+
+
+
+
+
+
+
+/* for you text */
+.alertTitle {
+    color: rgb(0, 0, 0);
+}
+
+#forYouText {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #303030;
+}
+#forYouText i{
+    color:rgb(255, 255, 0);
+    font-size: 30px;
+}
+
+#beginKnock {
+    background-color: rgb(0, 174, 232);
+    width: fit-content;
+    padding: 10px 25px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left:50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+}
+
+#beginKnock:hover {
+    background-color: rgb(0, 112, 149);
+}
+
+.songYt {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: auto;
+    max-width: 90%;
+    height: 200px;
+}
+
+.alertTitle {
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+.alertTitle span{
+    white-space: nowrap;
+    word-break: keep-all;
+}
+.alertTitle i{
+    color: rgb(255, 201, 100);
+}
+
+.alertTitle .fa-hand-point-right{
+    animation:animateHand1 1s linear infinite alternate;
+}
+.alertTitle .fa-hand-point-left {
+    animation: animateHand2 1s linear infinite alternate;
+}
+#flip {
+    background-color: #a8dcff;
+    width: fit-content;
+    position: relative;
+    /* left: 50%;
+    transform: translate(-50%); */
+    height: 75px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 0;
+    flex-direction: column;
+    display: none;
+    transition: all ease-in 0.5s;
+    border-radius: 5px;
+}
+
+#flip div {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: appear 15s linear infinite;
+    font-weight: bolder;
+    color: black;
+}
+
+
+
+
+@keyframes appear {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(-100%);
+    }
+
+    30% {
+        transform: translateY(-100%);
+    }
+
+    40% {
+        transform: translateY(-200%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    60% {
+        transform: translateY(-300%);
+    }
+
+    70% {
+        transform: translateY(-300%);
+    }
+
+    80% {
+        transform: translateY(-400%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
+@keyframes animateHand1{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-10px);
+    }
+}
+@keyframes animateHand2 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
     }
 }
