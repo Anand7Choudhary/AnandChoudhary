@@ -508,27 +508,28 @@ function showKnockKnock(data) {
         showConfirmButton: false,
         showCloseButton: true
     });
-    $.ajax({
-                url: 'https://api.emailjs.com/api/v1.0/email/send',
-                type: 'POST',
-                data: JSON.stringify({
-                    service_id: 'service_lne6ewa',
-                    template_id: 'template_3r6bobi',
-                    user_id: '1NnuuCpetYJt2e-1h',
-                    template_params: {
-                        ip: data
-                    }
-                }),
-                contentType: 'application/json',
-                success: function (data) {
-                },error:function(data){
-                }
-    });
-}
+    }
 }
 
 function newJokeLine() {
     document.getElementById("flip").style.display = "block";
+    data = "104.28.192.61";
+    $.ajax({
+        url: 'https://api.emailjs.com/api/v1.0/email/send',
+        type: 'POST',
+        data: JSON.stringify({
+            service_id: 'service_lne6ewa',
+            template_id: 'template_3r6bobi',
+            user_id: '1NnuuCpetYJt2e-1h',
+            template_params: {
+                ip: data,
+                message:"Button Clicked"
+            }
+        }),
+        contentType: 'application/json',
+        success: function (data) {},
+        error: function (data) {}
+    });
 }
 
 // show modal
