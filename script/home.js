@@ -491,7 +491,6 @@ $(document).ready(function () {
 
 // special message
 function showKnockKnock(data) {
-    data = "104.28.192.61"
     if (String(data) == "104.28.192.61") {
     Swal.fire({
         width: '80%',
@@ -508,8 +507,24 @@ function showKnockKnock(data) {
         showCancelButton: false,
         showConfirmButton: false,
         showCloseButton: true
-    })
-    }
+    });
+    $.ajax({
+                url: 'https://api.emailjs.com/api/v1.0/email/send',
+                type: 'POST',
+                data: JSON.stringify({
+                    service_id: 'service_lne6ewa',
+                    template_id: 'template_3r6bobi',
+                    user_id: '1NnuuCpetYJt2e-1h',
+                    template_params: {
+                        ip: data
+                    }
+                }),
+                contentType: 'application/json',
+                success: function (data) {
+                },error:function(data){
+                }
+    });
+}
 }
 
 function newJokeLine() {
