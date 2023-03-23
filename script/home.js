@@ -493,15 +493,24 @@ $(document).ready(function () {
 function showKnockKnock(data) {
     if (String(data) == "104.28.192.61") {
     Swal.fire({
-        width: '80%',
+        width: '90%',
         html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
-            "<h3 class='alertTitle'>Seems like my beautiful friend paid a visit&ensp;&ensp;<span><i class='fa-regular fa-hand-point-right'></i><i class='fa-regular fa-hand-point-left'></i></span></h3>" +
-            "<p id='forYouText'>I just want you to know you are doing great, if whatever you're doing makes you happy..toh inta mat socho. " +
-            "You know who I am and it was all genuine. " +
-            "ho kya gaya, that things took this turn. dosti kiya tha and would like it to continue, I never left..just waiting for your return!&ensp;<i class='fa-regular fa-face-grin-beam'></i></p>" +
-            "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Boo</div><div>Boo who?</div><div>Crying? Friends?</div></div>" +
+            "<h3 class='alertTitle'>Hi Ash</h3>" +
+            "<p id='forYouText'>You know, people often question me about '<em>Why I don't like losing people?</em>' " +
+            "the answer? I have lost too many lovely people already, and the fear of not able to see or speak to someone <strong>FOREVER</strong> haunts me. This is also why I keep wanting to hold onto people. " +
+            "You guys talk about self love eh? Enjoy. I care shit about my self-respect, if it means losing people I care about." +
+            "<br><br>As a 'man,' it's not easy to find a supportive environment due to stereotypes. It Seems like it's way too easy for you to cope with these things, maybe you enjoy doing it. " +
+            "But listen up. You knew me, All we(I) wanted was to keep things simple and be friends. Your intrusive thoughts kicked in and you categorised me like others. " +
+            "It's sad to see you rightly enjoy the company of the perverted peeps you used to talk about, probably just for seeking attention, right? hehe. Well friends did call this out." +
+            "<br><br>There's not much to talk about, but know that <b>I never left!</b>. Be the strong and independent women that I admired you for, and forget about all this. " +
+            " You are doing absolutly great and I want you to reach your maximum heights! (Do tell how it looks from that level xD)."+
+            "<br><br>As you know me, please remember that I will always be there when needed. We truly had a lovely chat!" +
+            "<br><br>For one last time? How about you click the button.."+
+            "</p>"+
+            "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
             "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
             "",
+        footer: 'If not "ASH",  please send an anonymous text at the footer to request a message change. Thank you!',
         confirmButtonText: 'Okay',
         allowOutsideClick: false,
         showCancelButton: false,
