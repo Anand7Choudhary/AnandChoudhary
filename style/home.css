@@ -1953,13 +1953,14 @@ form .btn:hover::after {
     }
 
     .mainBody .landingPage {
-        padding: 0 0 0 10%;
+        padding: 0 0 0 20px;
         flex-direction: column-reverse;
         justify-content: flex-end;
         gap: 50px;
         min-height: 100vh;
         max-height: fit-content;
         padding-bottom: 50px;
+        /* padding-left: 10px; */
     }
 
     .mainBody .landingPage .landingPageDig {
@@ -2212,7 +2213,9 @@ form .btn:hover::after {
 }
 
 @media screen and (max-width:450px) {
-
+    .mainBody .landingPage {
+        padding: 0 0 0 25px;
+    }
     .mainBody .skillGlobe .content1,
     .mainBody .skillGlobe .content2 {
         display: none;
@@ -2241,7 +2244,12 @@ form .btn:hover::after {
 }
 
 @media screen and (max-width:350px) {
-
+    .mainBody .landingPage {
+        padding: 0 0 0 50px;
+    }
+    .mainBody .landingPage .landingPageTitle{
+        font-size:20px;
+    }
     .mainBody .skillGlobe .content1,
     .mainBody .skillGlobe .content2,
     .mainBody .skillGlobe .content3 {
