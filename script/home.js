@@ -501,7 +501,7 @@ function showKnockKnock(data) {
             "You guys talk about self love eh? Enjoy. I care shit about my self-respect, if it means losing people I care about." +
             "<br><br>As a 'man,' it's not easy to find a supportive environment due to stereotypes. It Seems like it's way too easy for you to cope with these things, maybe you enjoy doing it. " +
             "But listen up. You knew me, All we(I) wanted was to keep things simple and be friends. Your intrusive thoughts kicked in and you categorised me like others. " +
-            "It's sad to see you rightly enjoy the company of the perverted peeps you used to talk about, probably just for seeking attention, right? hehe. Well friends did call this out." +
+            "It make me worried seeing you sad, itna matt soch, if you are reading this, ask yourself why? why are you at this page? this website? don't do it." +
             "<br><br>There's not much to talk about, but know that <b>I never left!</b>. Be the strong and independent women that I admired you for, and forget about all this. " +
             " You are doing absolutly great and I want you to reach your maximum heights! (Do tell how it looks from that level xD)."+
             "<br><br>As you know me, please remember that I will always be there when needed. We truly had a lovely chat!" +
