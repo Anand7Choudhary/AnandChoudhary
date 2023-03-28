@@ -491,21 +491,20 @@ $(document).ready(function () {
 
 // special message
 function showKnockKnock(data) {
-    if (String(data) == "104.28.192.61") {
+    if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64") {
     Swal.fire({
         width: '90%',
         html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
             "<h3 class='alertTitle'>Hi Ash</h3>" +
-            "<p id='forYouText'>You know, people often question me about '<em>Why I don't like losing people?</em>' " +
-            "the answer? I have lost too many lovely people already, and the fear of not able to see or speak to someone <strong>FOREVER</strong> haunts me. This is also why I keep wanting to hold onto people. " +
-            "You guys talk about self love eh? Enjoy. I care shit about my self-respect, if it means losing people I care about." +
-            "<br><br>As a 'man,' it's not easy to find a supportive environment due to stereotypes. It Seems like it's way too easy for you to cope with these things, maybe you enjoy doing it. " +
-            "But listen up. You knew me, All we(I) wanted was to keep things simple and be friends. Your intrusive thoughts kicked in and you categorised me like others. " +
-            "It make me worried seeing you sad, itna matt soch, if you are reading this, ask yourself why? why are you at this page? this website? don't do it." +
-            "<br><br>There's not much to talk about, but know that <b>I never left!</b>. Be the strong and independent women that I admired you for, and forget about all this. " +
-            " You are doing absolutly great and I want you to reach your maximum heights! (Do tell how it looks from that level xD)."+
-            "<br><br>As you know me, please remember that I will always be there when needed. We truly had a lovely chat!" +
-            "<br><br>For one last time? How about you click the button.."+
+            "<p>Your forehead so big, I might need an airplane to land, hehe.<br><br>UK baby! Know your goal and you'll just do great! You are one strong women(reason 107 I wanted to know you more). Just remember " +
+            "I'll be there, whenever required. You knew I was geniune, but you let your intrusive thoughts kick in 🙆‍♂️." +
+            "Two things that sadden me was, the fact that I was foolish to think this was mutual and wanted to build on this, and the lack of respect "+
+            "I got, for if anything I did. I was played around, my friends rightly called this. UGHHH!!!"+
+            "<br><br>But yeah! there is always a good side. The Anand you knew is killed, Changed mindset, less talk, more focused, failed to help you last time (regret for life)...but now working on that gains 💪 xD"+
+            "<br><br>Just in case, if you want to know why I don't normally want to lose people in life? is because of the fact, I have already lost my dearest ones and knowing that I won't be able to hear them or see them anymore this life, haunts me. "+
+            "I give a fuck all to my self respect if costs me somone. As a women you might enjoy this, mainly because there are over 100s of people ready to console you (Sorry to say, but not everyone wants enter your pants)."+
+            "<br><br>Well forget all this crap and ask yourself why are you here? Why are you even reading this? You wanted this!! You did this!! <strong>I NEVER LEFT</strong>. Mat kar, you are going to do wonders and reach heights (let me know how it looks from top)."+
+            "<br><br>Maybe for one last time? How about you click the button..<br>."+
             "</p>"+
             "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
             "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
