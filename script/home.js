@@ -496,14 +496,14 @@ function showKnockKnock(data) {
         width: '90%',
         html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
             "<h3 class='alertTitle'>Hi Ash</h3>" +
-            "<p>Your forehead so big, I might need an airplane to land, hehe.<br><br>UK baby! Know your goal and you'll just do great! You are one strong women(reason 107 I wanted to know you more). Just remember " +
+            "<p>Your forehead so big, I might need an airplane to land, hehe.<br><br>UK baby! Know your goal and you'll do just great! You are one strong women(reason 107 why I wanted to know you more). Just remember " +
             "I'll be there, whenever required. You knew I was geniune, but you let your intrusive thoughts kick in 🙆‍♂️." +
-            "Two things that sadden me was, the fact that I was foolish to think this was mutual and wanted to build on this, and the lack of respect "+
+            "Two things that sadden me was, the fact that I was foolish to think this was all mutual and wanted to build on this alone, and the lack of respect "+
             "I got, for if anything I did. I was played around, my friends rightly called this. UGHHH!!!"+
-            "<br><br>But yeah! there is always a good side. The Anand you knew is killed, Changed mindset, less talk, more focused, failed to help you last time (regret for life)...but now working on that gains 💪 xD"+
+            "<br><br>But yeah! there is always a good side. Better work ethics, changed mindset, creatring hobbies, no sleep (Average Adult xD) and also now working on that gains 💪"+
             "<br><br>Just in case, if you want to know why I don't normally want to lose people in life? is because of the fact, I have already lost my dearest ones and knowing that I won't be able to hear them or see them anymore this life, haunts me. "+
-            "I give a fuck all to my self respect if costs me somone. As a women you might enjoy this, mainly because there are over 100s of people ready to console you (Sorry to say, but not everyone wants enter your pants)."+
-            "<br><br>Well forget all this crap and ask yourself why are you here? Why are you even reading this? You wanted this!! You did this!! <strong>I NEVER LEFT</strong>. Mat kar, you are going to do wonders and reach heights (let me know how it looks from top)."+
+            "I give zero fuck about my self respect if it means to not lose someone. As a women you might enjoy all this, mainly because there are over 100s of people ready to console you (Sorry to say, but not everyone wants to enter your pants)."+
+            "<br><br>Well forget all this crap and ask yourself why are you here? Why are you even reading this? You wanted this!! You did this!! <strong>I NEVER LEFT</strong>. Mat kar, na he tu apna dil ka sun rahi hai, na he apna deemag ka. I'll wait."+
             "<br><br>Maybe for one last time? How about you click the button..<br>."+
             "</p>"+
             "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
