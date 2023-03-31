@@ -495,21 +495,22 @@ function showKnockKnock(data) {
     Swal.fire({
         width: '90%',
         html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
-            "<h3 class='alertTitle'>Hi Ash</h3>" +
-            "<p>Your forehead so big, I might need an airplane to land, hehe.<br><br>UK baby! Know your goal and you'll do just great! You are one strong women(reason 107 why I wanted to know you more). Just remember " +
-            "I'll be there, whenever required. You knew I was geniune, but you let your intrusive thoughts kick in 🙆‍♂️." +
-            "Two things that sadden me was, the fact that I was foolish to think this was all mutual and wanted to build on this alone, and the lack of respect "+
-            "I got, for if anything I did. I was played around, my friends rightly called this. UGHHH!!!"+
-            "<br><br>But yeah! there is always a good side. Better work ethics, changed mindset, creatring hobbies, no sleep (Average Adult xD) and also now working on that gains 💪"+
-            "<br><br>Just in case, if you want to know why I don't normally want to lose people in life? is because of the fact, I have already lost my dearest ones and knowing that I won't be able to hear them or see them anymore this life, haunts me. "+
-            "I give zero fuck about my self respect if it means to not lose someone. As a women you might enjoy all this, mainly because there are over 100s of people ready to console you (Sorry to say, but not everyone wants to enter your pants)."+
-            "<br><br>Well forget all this crap and ask yourself why are you here? Why are you even reading this? You wanted this!! You did this!! <strong>I NEVER LEFT</strong>. Mat kar, na he tu apna dil ka sun rahi hai, na he apna deemag ka. I'll wait."+
+            "<h3 class='alertTitle'>Hey</h3>" +
+            "<p>Why are you here? You wanted this, you did this. You have an goal, strive hard and bas ho gaya.<br><br>"+
+            "People generally surround themselves with the feeling and not with the person. You wanted little attention and I did provide you. It was us who "+
+            "wanted this friendship to build, lekin I was probably wrong. As your attention span decreased, your intrusive thoughts kicked in and right their I was subjectified. " +
+            "<br><br>You knew I was genuine and all I wanted was to build things up, their wasn't any 'we' yes? YES. I never left, I truly belive agar kuch hona hai toh hoga. "+
+            "If this bond is meant to be formed, it will. Two things that sadden me was, the fact that I was foolish to think this was all mutual and wanted to build on this alone, and the little respect, for if anything I did. I was played around, my friends rightly called this. UGHHH!!!"+
+            "<br><br>Clear toh tha ki dosti is all I wanted, lekin idk. You do love your friends right? isme tere kuch weird nahi laga? well just forget all this crap now. I want to see you grow. "+
+            "You are one strong women (107 reasons why I liked you) and aim to reach the top(Let me know what's the view from there, hehe) and..and please talk to people, things clear out when you TALK! ek he toh life hai, we want to do everything, toh why? it's not we'll remember shit in next life toh clear things right there. "+
+            "<br><br>Also, got to know that you are doing really well, chin up. and last mai 'if you ever think of doing something more than 10 times then do it'."+
+            "<br><br>I never left, I'll wait."+
             "<br><br>Maybe for one last time? How about you click the button..<br>."+
             "</p>"+
             "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
             "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
             "",
-        footer: 'If not "ASH",  please send an anonymous text at the footer to request a message change. Thank you!',
+        footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
         confirmButtonText: 'Okay',
         allowOutsideClick: false,
         showCancelButton: false,
