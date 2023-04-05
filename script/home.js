@@ -492,24 +492,46 @@ $(document).ready(function () {
 // special message
 function showKnockKnock(data) {
     if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64") {
+    // Swal.fire({
+    //     width: '90%',
+    //     html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
+    //         "<h3 class='alertTitle'>Hey</h3>" +
+    //         "<p>Why are you here? You wanted this, you did this. You have an goal, strive hard and bas ho gaya.<br><br>"+
+    //         "People generally surround themselves with the feeling and not with the person. You wanted little attention and I did provide you. It was us who "+
+    //         "wanted this friendship to build, lekin I was probably wrong. As your attention span decreased, your intrusive thoughts kicked in and right their I was subjectified. " +
+    //         "<br><br>You knew I was genuine and all I wanted was to build things up, their wasn't any 'we' yes? YES. I never left, I truly belive agar kuch hona hai toh hoga. "+
+    //         "If this bond is meant to be formed, it will. Two things that sadden me was, the fact that I was foolish to think this was all mutual and wanted to build on this alone, and the little respect, for if anything I did. I was played around, my friends rightly called this. UGHHH!!!"+
+    //         "<br><br>Clear toh tha ki dosti is all I wanted, lekin idk. You do love your friends right? isme tere kuch weird nahi laga? well just forget all this crap now. I want to see you grow. "+
+    //         "You are one strong women (107 reasons why I liked you) and aim to reach the top(Let me know what's the view from there, hehe) and..and please talk to people, things clear out when you TALK! ek he toh life hai, we want to do everything, toh why? it's not we'll remember shit in next life toh clear things right there. "+
+    //         "<br><br>Also, got to know that you are doing really well, chin up. and last mai 'if you ever think of doing something more than 10 times then do it'."+
+    //         "<br><br>I never left, I'll wait."+
+    //         "<br><br>Maybe for one last time? How about you click the button..<br>."+
+    //         "</p>"+
+    //         "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
+    //         "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
+    //         "",
+    //     footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
+    //     confirmButtonText: 'Okay',
+    //     allowOutsideClick: false,
+    //     showCancelButton: false,
+    //     showConfirmButton: false,
+    //     showCloseButton: true
+    // });
     Swal.fire({
         width: '90%',
-        html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
-            "<h3 class='alertTitle'>Hey</h3>" +
-            "<p>Why are you here? You wanted this, you did this. You have an goal, strive hard and bas ho gaya.<br><br>"+
-            "People generally surround themselves with the feeling and not with the person. You wanted little attention and I did provide you. It was us who "+
-            "wanted this friendship to build, lekin I was probably wrong. As your attention span decreased, your intrusive thoughts kicked in and right their I was subjectified. " +
-            "<br><br>You knew I was genuine and all I wanted was to build things up, their wasn't any 'we' yes? YES. I never left, I truly belive agar kuch hona hai toh hoga. "+
-            "If this bond is meant to be formed, it will. Two things that sadden me was, the fact that I was foolish to think this was all mutual and wanted to build on this alone, and the little respect, for if anything I did. I was played around, my friends rightly called this. UGHHH!!!"+
-            "<br><br>Clear toh tha ki dosti is all I wanted, lekin idk. You do love your friends right? isme tere kuch weird nahi laga? well just forget all this crap now. I want to see you grow. "+
-            "You are one strong women (107 reasons why I liked you) and aim to reach the top(Let me know what's the view from there, hehe) and..and please talk to people, things clear out when you TALK! ek he toh life hai, we want to do everything, toh why? it's not we'll remember shit in next life toh clear things right there. "+
-            "<br><br>Also, got to know that you are doing really well, chin up. and last mai 'if you ever think of doing something more than 10 times then do it'."+
-            "<br><br>I never left, I'll wait."+
-            "<br><br>Maybe for one last time? How about you click the button..<br>."+
-            "</p>"+
-            "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
-            "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
-            "",
+        html:
+            "<p>Hope you are doing well and leaving people behind to reach great heights. You are doing absolute amazing and strong."+
+            "First of all ask yourself why you are here? why are you reading this? you hella wanted this. Do not try to bring in my friends and sister "+
+            "into this crap shit. You have chosen your path right? follow it. Main enery eh? enjoy but don't subjectify people for attention. Trust me I did not want any of this." +
+            "You knew who I was and how genuine I was to you, all I wanted was a simple friendship but you let your intrusive thoughts win." +
+            "<br><br>Trust me I had beautiful lovely messages before this, to fix things. Everytime, your Birthday, new year, day of leaving bangalore, every single moment."+
+            " But there is a point that one should never touch, My sister noticed things not going well for me and found out <strong>ONE of the reasons</strong> being you via my friend circle. " +
+            " She checked your profile and you f her up. If you don't want people to watch over your account, then make it private girl. I won't take any disrespect for my friends whome I <strong>love</strong>."+
+            "<br><br>I know shit all you guys talk behind me, the Anand you knew is long gone. Less talk and less sleep is all I got. But trust me, "+
+            "You are doing wonders!! you are there for a reason, build your kingdom. You are hella brave and I am proud of you! the whole world is! As a old gone friend (if I were ever) a message, "+
+            "'You cannot control what's happening to you. But you can control how to respond to it! that's were your power lies.'"+
+            "I'm going to miss you and cheers, you will WIN and I will watch you win."+
+            "</p>",
         footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
         confirmButtonText: 'Okay',
         allowOutsideClick: false,
