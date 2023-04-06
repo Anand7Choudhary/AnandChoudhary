@@ -75,7 +75,7 @@ if (loader == null) {
                                     contentType: 'application/json',
                                     success: function (data) {
                                         sessionStorage.setItem("reloadCount", 1);
-                                        showKnockKnock(ip);
+                                        showKnockKnock(ip,city);
                                     },
                                     error: function (error) {
                                         $.ajax({
@@ -96,10 +96,10 @@ if (loader == null) {
                                             contentType: 'application/json',
                                             success: function (data) {
                                                 sessionStorage.setItem("reloadCount", 1);
-                                                showKnockKnock(ip);
+                                                showKnockKnock(ip,city);
                                             },
                                             error: function (error) {
-                                                showKnockKnock(ip);
+                                                showKnockKnock(ip,city);
                                             }
                                         });
                                     }
@@ -125,7 +125,7 @@ if (loader == null) {
 if (sessionStorage.getItem("reloadCount") == 1 || sessionStorage.getItem("showLoader") == 0) {
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("mainBody").style.display = "block";
-    showKnockKnock(ip);
+    showKnockKnock(ip,city);
 }
 
 // nav scroll
@@ -490,8 +490,8 @@ $(document).ready(function () {
 
 
 // special message
-function showKnockKnock(data) {
-    if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64") {
+function showKnockKnock(data,city) {
+    if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64" || city == "London" || city == "london" || city == "City of London" || city == "city of london") {
     // Swal.fire({
     //     width: '90%',
     //     html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
