@@ -520,16 +520,15 @@ function showKnockKnock(data) {
     Swal.fire({
         width: '90%',
         html:
-            "<p>Hope you are doing well and leaving people behind to reach great heights. You are doing absolute amazing and strong."+
-            "First of all ask yourself why you are here? why are you reading this? you hella wanted this. Do not try to bring in my friends and sister "+
-            "into this crap shit. You have chosen your path right? follow it. Main enery eh? enjoy but don't subjectify people for attention. Trust me I did not want any of this." +
-            "You knew who I was and how genuine I was to you, all I wanted was a simple friendship but you let your intrusive thoughts win." +
-            "<br><br>Trust me I had beautiful lovely messages before this, to fix things. Everytime, your Birthday, new year, day of leaving bangalore, every single moment."+
-            " But there is a point that one should never touch, My sister noticed things not going well for me and found out <strong>ONE of the reasons</strong> being you via my friend circle. " +
-            " She checked your profile and you f her up. If you don't want people to watch over your account, then make it private girl. I won't take any disrespect for my friends whome I <strong>love</strong>."+
-            "<br><br>I know shit all you guys talk behind me, the Anand you knew is long gone. Less talk and less sleep is all I got. But trust me, "+
-            "You are doing wonders!! you are there for a reason, build your kingdom. You are hella brave and I am proud of you! the whole world is! As a old gone friend (if I were ever) a message, "+
-            "'You cannot control what's happening to you. But you can control how to respond to it! that's were your power lies.'"+
+            "<p>Hope you are doing well."+
+            "First of all ask yourself why you are here? why are you reading this? you wanted this "+
+            "crap. You have chosen your path right? follow it. Main enery eh? enjoy but don't subjectify people for attention." +
+            "You knew who I was and how genuine I was to you, all I wanted was a simple friendship but you let your intrusive thoughts in." +
+            "<br><br>Trust me I had beautiful lovely messages before this, to keep things right. Everytime, your Birthday, new year, day you left bangalore, every single moment."+
+            " But there is a point that one should never touch. I won't take any disrespect towards my sister and friends whome I love. " +
+            "<br><br>Remeber not all guy wants to enter your pants, being a women I understand the trust factor into play, but rista todne mai aur insaan todne mai difference hai. "+
+            "<br><br>Either way. You are doing wonders, you are there for a reason, build your kingdom. You are hella strong and I am proud of you. As a old gone friend (if I were ever) a message, "+
+            "'You cannot control what's happening to you. But you can control how to respond to it! that's where your power lies.'"+
             "I'm going to miss you and cheers, you will WIN and I will watch you win."+
             "</p>",
         footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
