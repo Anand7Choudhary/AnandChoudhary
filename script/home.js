@@ -491,46 +491,26 @@ $(document).ready(function () {
 
 // special message
 function showKnockKnock(data,city) {
-    if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64" || city == "London" || city == "london" || city == "City of London" || city == "city of london") {
-    // Swal.fire({
-    //     width: '90%',
-    //     html: '<video class="songYt" preload="auto" controls autoplay><source src="image/vidForSpecific.webm" type="video/webm"></video>'+
-    //         "<h3 class='alertTitle'>Hey</h3>" +
-    //         "<p>Why are you here? You wanted this, you did this. You have an goal, strive hard and bas ho gaya.<br><br>"+
-    //         "People generally surround themselves with the feeling and not with the person. You wanted little attention and I did provide you. It was us who "+
-    //         "wanted this friendship to build, lekin I was probably wrong. As your attention span decreased, your intrusive thoughts kicked in and right their I was subjectified. " +
-    //         "<br><br>You knew I was genuine and all I wanted was to build things up, their wasn't any 'we' yes? YES. I never left, I truly belive agar kuch hona hai toh hoga. "+
-    //         "If this bond is meant to be formed, it will. Two things that sadden me was, the fact that I was foolish to think this was all mutual and wanted to build on this alone, and the little respect, for if anything I did. I was played around, my friends rightly called this. UGHHH!!!"+
-    //         "<br><br>Clear toh tha ki dosti is all I wanted, lekin idk. You do love your friends right? isme tere kuch weird nahi laga? well just forget all this crap now. I want to see you grow. "+
-    //         "You are one strong women (107 reasons why I liked you) and aim to reach the top(Let me know what's the view from there, hehe) and..and please talk to people, things clear out when you TALK! ek he toh life hai, we want to do everything, toh why? it's not we'll remember shit in next life toh clear things right there. "+
-    //         "<br><br>Also, got to know that you are doing really well, chin up. and last mai 'if you ever think of doing something more than 10 times then do it'."+
-    //         "<br><br>I never left, I'll wait."+
-    //         "<br><br>Maybe for one last time? How about you click the button..<br>."+
-    //         "</p>"+
-    //         "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
-    //         "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
-    //         "",
-    //     footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
-    //     confirmButtonText: 'Okay',
-    //     allowOutsideClick: false,
-    //     showCancelButton: false,
-    //     showConfirmButton: false,
-    //     showCloseButton: true
-    // });
+    if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64" || city == "London" || city == "london" || city == "City of London" || city == "city of london" || city=="Hatfield" || city=="hatfield" || city=="HatField") {
     Swal.fire({
         width: '90%',
-        html:
-            "<p>Hope you are doing well."+
-            "First of all ask yourself why you are here? why are you reading this? you wanted this "+
-            "crap. You have chosen your path right? follow it. Main enery eh? enjoy but don't subjectify people for attention." +
-            "You knew who I was and how genuine I was to you, all I wanted was a simple friendship but you let your intrusive thoughts in." +
-            "<br><br>Trust me I had beautiful lovely messages before this, to keep things right. Everytime, your Birthday, new year, day you left bangalore, every single moment."+
-            " But there is a point that one should never touch. I won't take any disrespect towards my sister and friends whome I love. " +
-            "<br><br>Remeber not all guy wants to enter your pants, being a women I understand the trust factor into play, but rista todne mai aur insaan todne mai difference hai. "+
-            "<br><br>Either way. You are doing wonders, you are there for a reason, build your kingdom. You are hella strong and I am proud of you. As a old gone friend (if I were ever) a message, "+
-            "'You cannot control what's happening to you. But you can control how to respond to it! that's where your power lies.'"+
-            "I'm going to miss you and cheers, you will WIN and I will watch you win."+
-            "</p>",
+        html: '<video class="songYt" preload="auto" controls autoplay><source src="vidForSpecific.webm" type="video/webm"></video>' +
+            "<h3 class='alertTitle'>Hey</h3>" +
+            "<p>Why are you here? you wanted this f shit. It's was pretty transparent, all lies, promises, the time and respect you provided me. " +
+            "You know me, you know how genuine I was and all I wanted was a simple so called friendship but you let your intrusive thoughts win and subjectified me." +
+            "Women want attention and I did provide, it was wrong of me to think this was something to build. One thing I would personally tell " +
+            "as a fucking monk I used to be is 'We cannot control what happens to us, but we can control how to respond to it. That's where our power lies." +
+            "<br><br>I don't care about my respect if it means to lose someone but when it comes to my sister and friends I give zero fucks about you. " +
+            "Get this straight, I had beautiful 100+ messages before this to fix things up. But the constant reminders of lies told pulled me back. Also remember " +
+            "not everyone wants to enter your pants, as a man I do understand your trust and safety issues, but on a cost to disrespect others? Go girl." +
+            "<br><br>Either way, I'm done with all this shit and you are doing great. You have the so called main energy eh? focus on it. You have a purpose " +
+            "and remeber you will win and I'll watch you win. Shit happens and it is meant to strength people and so that they can move ahead. I'm just a NPC in your world. " +
+            "It's just I never left from the bond." +
+            "<br><br>Maybe for one last time? How about you click the button..<br>." +
+            "</p>" +
+            "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
+            "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
+            "",
         footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
         confirmButtonText: 'Okay',
         allowOutsideClick: false,
