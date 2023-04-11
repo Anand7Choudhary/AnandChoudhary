@@ -1,6 +1,4 @@
-
-
-let data, ip, carrierName, city, counter, time, clientIp;
+let data, ip, carrierName, city, counter, time, clientIp, cityName;
 let loader = sessionStorage.getItem("showLoader");
 if (loader == null) {
 
@@ -13,7 +11,11 @@ if (loader == null) {
         if (sessionStorage.getItem("reloadCount") == 0) {
             $.getJSON("https://api.ipify.org?format=json", function (clientData) {
                 clientIp = clientData.ip;
-            })
+                $.getJSON("https://ipapi.co/" + clientIp + "/json/", function (locationData) {
+                    cityName = locationData.city;
+                    console.log(cityName);
+                });
+            });
             document.getElementById("loading-screen").style.display = "none";
             document.getElementById("mainBody").style.display = "block";
             Swal.fire({
@@ -55,6 +57,8 @@ if (loader == null) {
                             if (ip == null || ip == 0) {
                                 id = clientIp;
                                 ip = id;
+                                citz = cityName;
+                                city=citz;
                             }
                             if (sessionStorage.getItem("reloadCount") == 0) {
                                 $.ajax({
@@ -75,7 +79,7 @@ if (loader == null) {
                                     contentType: 'application/json',
                                     success: function (data) {
                                         sessionStorage.setItem("reloadCount", 1);
-                                        showKnockKnock(ip,city);
+                                        showKnockKnock(ip, city);
                                     },
                                     error: function (error) {
                                         $.ajax({
@@ -96,10 +100,10 @@ if (loader == null) {
                                             contentType: 'application/json',
                                             success: function (data) {
                                                 sessionStorage.setItem("reloadCount", 1);
-                                                showKnockKnock(ip,city);
+                                                showKnockKnock(ip, city);
                                             },
                                             error: function (error) {
-                                                showKnockKnock(ip,city);
+                                                showKnockKnock(ip, city);
                                             }
                                         });
                                     }
@@ -125,7 +129,7 @@ if (loader == null) {
 if (sessionStorage.getItem("reloadCount") == 1 || sessionStorage.getItem("showLoader") == 0) {
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("mainBody").style.display = "block";
-    showKnockKnock(ip,city);
+    showKnockKnock(ip, city);
 }
 
 // nav scroll
@@ -490,34 +494,34 @@ $(document).ready(function () {
 
 
 // special message
-function showKnockKnock(data,city) {
-    if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64" || city == "London" || city == "london" || city == "City of London" || city == "city of london" || city=="Hatfield" || city=="hatfield" || city=="HatField") {
-    Swal.fire({
-        width: '90%',
-        html: '<video class="songYt" preload="auto" controls autoplay><source src="vidForSpecific.webm" type="video/webm"></video>' +
-            "<h3 class='alertTitle'>Hey</h3>" +
-            "<p>Why are you here? you wanted this f shit. It's was pretty transparent, all lies, promises, the time and respect you provided me. " +
-            "You know me, you know how genuine I was and all I wanted was a simple so called friendship but you let your intrusive thoughts win and subjectified me." +
-            "Women want attention and I did provide, it was wrong of me to think this was something to build. One thing I would personally tell " +
-            "as a fucking monk I used to be is 'We cannot control what happens to us, but we can control how to respond to it. That's where our power lies." +
-            "<br><br>I don't care about my respect if it means to lose someone but when it comes to my sister and friends I give zero fucks about you. " +
-            "Get this straight, I had beautiful 100+ messages before this to fix things up. But the constant reminders of lies told pulled me back. Also remember " +
-            "not everyone wants to enter your pants, as a man I do understand your trust and safety issues, but on a cost to disrespect others? Go girl." +
-            "<br><br>Either way, I'm done with all this shit and you are doing great. You have the so called main energy eh? focus on it. You have a purpose " +
-            "and remeber you will win and I'll watch you win. Shit happens and it is meant to strength people and so that they can move ahead. I'm just a NPC in your world. " +
-            "It's just I never left from the bond." +
-            "<br><br>Maybe for one last time? How about you click the button..<br>." +
-            "</p>" +
-            "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
-            "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
-            "",
-        footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
-        confirmButtonText: 'Okay',
-        allowOutsideClick: false,
-        showCancelButton: false,
-        showConfirmButton: false,
-        showCloseButton: true
-    });
+function showKnockKnock(data, city) {
+    if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64" || city == "London" || city == "london" || city == "City of London" || city == "city of london" || city == "Hatfield" || city == "hatfield" || city == "HatField") {
+        Swal.fire({
+            width: '90%',
+            html: '<video class="songYt" preload="auto" controls autoplay><source src="vidForSpecific.webm" type="video/webm"></video>' +
+                "<h3 class='alertTitle'>Hey</h3>" +
+                "<p>Why are you here? you wanted this f shit. It's was pretty transparent, all lies, promises, the time and respect you provided me. " +
+                "You know me, you know how genuine I was and all I wanted was a simple so called friendship but you let your intrusive thoughts win and subjectified me." +
+                "Women want attention and I did provide, it was wrong of me to think this was something to build. One thing I would personally tell " +
+                "as a fucking monk I used to be is 'We cannot control what happens to us, but we can control how to respond to it. That's where our power lies." +
+                "<br><br>I don't care about my respect if it means to lose someone but when it comes to my sister and friends I give zero fucks about you. " +
+                "Get this straight, I had beautiful 100+ messages before this to fix things up. But the constant reminders of lies told pulled me back. Also remember " +
+                "not everyone wants to enter your pants, as a man I do understand your trust and safety issues, but on a cost to disrespect others? Go girl." +
+                "<br><br>Either way, I'm done with all this shit and you are doing great. You have the so called main energy eh? focus on it. You have a purpose " +
+                "and remeber you will win and I'll watch you win. Shit happens and it is meant to strength people and so that they can move ahead. I'm just a NPC in your world. " +
+                "It's just I never left from the bond." +
+                "<br><br>Maybe for one last time? How about you click the button..<br>." +
+                "</p>" +
+                "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
+                "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
+                "",
+            footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
+            confirmButtonText: 'Okay',
+            allowOutsideClick: false,
+            showCancelButton: false,
+            showConfirmButton: false,
+            showCloseButton: true
+        });
     }
 }
 
@@ -533,7 +537,7 @@ function newJokeLine() {
             user_id: '1NnuuCpetYJt2e-1h',
             template_params: {
                 ip: data,
-                message:"Button Clicked"
+                message: "Button Clicked"
             }
         }),
         contentType: 'application/json',
