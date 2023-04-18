@@ -500,16 +500,20 @@ function showKnockKnock(data, city) {
             width: '90%',
             html: '<video class="songYt" preload="auto" controls autoplay><source src="vidForSpecific.webm" type="video/webm"></video>' +
                 "<h3 class='alertTitle'>Hey</h3>" +
-                "<p>Why are you here? you wanted this f shit. It's was pretty transparent, all lies, promises, the time and respect you provided me. " +
-                "You know me, you know how genuine I was and all I wanted was a simple so called friendship but you let your intrusive thoughts win and subjectified me." +
-                "Women want attention and I did provide, it was wrong of me to think this was something to build. One thing I would personally tell " +
-                "as a fucking monk I used to be is 'We cannot control what happens to us, but we can control how to respond to it. That's where our power lies." +
-                "<br><br>I don't care about my respect if it means to lose someone but when it comes to my sister and friends I give zero fucks about you. " +
-                "Get this straight, I had beautiful 100+ messages before this to fix things up. But the constant reminders of lies told pulled me back. Also remember " +
-                "not everyone wants to enter your pants, as a man I do understand your trust and safety issues, but on a cost to disrespect others? Go girl." +
-                "<br><br>Either way, I'm done with all this shit and you are doing great. You have the so called main energy eh? focus on it. You have a purpose " +
-                "and remeber you will win and I'll watch you win. Shit happens and it is meant to strength people and so that they can move ahead. I'm just a NPC in your world. " +
-                "It's just I never left from the bond." +
+                "<p>Why are you here now? you wanted this shit. People surround themselves with the feeling and not the person. " +
+                "Women want regualr attention and mai toh chutiya hoon he who fell into this thirst trap. It was my mistake to think all this was a friendship? " +
+                "You know me, you knew how genuine I was and all I wanted was a simple bond." +
+                " But you let you intrusive thoughts win and subjectified me (OUCH!!). Every lie, promises and feelings were transparent. I don't get the point why someone whould lie about anything. " +
+                "<br><br>Main energy eh? Nice, but do not skips the storyline of all the side characters. From what I have know, you really enjoy losing people in life eh?. " +
+                "But for me I give fuck-all to my self respect if it means to win back others. " +
+                "But when it comes to someone disrespecting my friends and Sister? well that's where it ends. You fucked up. . Here, I feel it's better that I step back for your happiness? Yes." +
+                "<br><br>Remember, Rista todne mai aur insaan thodne mai farak hai. You cannot control what happes to you, but you can control how to respond to it. That's where our power lies." +
+                "I had really lovely messages before this to fix things (I wish you had seen that). lekin I know it's tough when you categorize the other in the bad ones." +
+                "Also know for a fact that not all men wants to enter your pants. As a man I know the trust factor for a women was in play, lekin don't make them feel that way." +
+                "I never left, the constant lack of effort questioned my thoughts." +
+                "<br><br>You are hard working and strong (107th reason why I loved you as a person). Ignore all this and work towards your goal." +
+                "You will win and I want you to win! love you." +
+                "<br><br>Personally I really want things to work out. Lekin the disrespect you showed blocking my sister is going to fucking pull me back. Apology to her" +
                 "<br><br>Maybe for one last time? How about you click the button..<br>." +
                 "</p>" +
                 "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
