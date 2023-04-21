@@ -498,28 +498,43 @@ function showKnockKnock(data, city) {
     if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64" || city == "London" || city == "london" || city == "City of London" || city == "city of london" || city == "Hatfield" || city == "hatfield" || city == "HatField") {
         Swal.fire({
             width: '90%',
-            html: '<video class="songYt" preload="auto" controls autoplay><source src="vidForSpecific.webm" type="video/webm"></video>' +
-                "<h3 class='alertTitle'>Hey</h3>" +
-                "<p>Why are you here now? you wanted this shit. People surround themselves with the feeling and not the person. " +
-                "Women want regualr attention and mai toh chutiya hoon he who fell into this thirst trap. It was my mistake to think all this was a friendship? " +
-                "You know me, you knew how genuine I was and all I wanted was a simple bond." +
-                " But you let you intrusive thoughts win and subjectified me (OUCH!!). Every lie, promises and feelings were transparent. I don't get the point why someone whould lie about anything. " +
-                "<br><br>Main energy eh? Nice, but do not skips the storyline of all the side characters. From what I have know, you really enjoy losing people in life eh?. " +
-                "But for me I give fuck-all to my self respect if it means to win back others. " +
-                "But when it comes to someone disrespecting my friends and Sister? well that's where it ends. You fucked up. . Here, I feel it's better that I step back for your happiness? Yes." +
-                "<br><br>Remember, Rista todne mai aur insaan thodne mai farak hai. You cannot control what happes to you, but you can control how to respond to it. That's where our power lies." +
-                "I had really lovely messages before this to fix things (I wish you had seen that). lekin I know it's tough when you categorize the other in the bad ones." +
-                "Also know for a fact that not all men wants to enter your pants. As a man I know the trust factor for a women was in play, lekin don't make them feel that way." +
-                "I never left, the constant lack of effort questioned my thoughts." +
-                "<br><br>You are hard working and strong (107th reason why I loved you as a person). Ignore all this and work towards your goal." +
-                "You will win and I want you to win! love you." +
-                "<br><br>Personally I really want things to work out. Lekin the disrespect you showed blocking my sister is going to fucking pull me back. Apology to her" +
-                "<br><br>Maybe for one last time? How about you click the button..<br>." +
+            // html: '<video class="songYt" preload="auto" controls autoplay><source src="vidForSpecific.webm" type="video/webm"></video>' +
+            //     "<h3 class='alertTitle'>Hey</h3>" +
+            //     "<p>Why are you here now? you wanted this shit. People surround themselves with the feeling and not the person. " +
+            //     "Women want regualr attention and mai toh chutiya hoon he who fell into this thirst trap. It was my mistake to think all this was a friendship? " +
+            //     "You know me, you knew how genuine I was and all I wanted was a simple bond." +
+            //     " But you let you intrusive thoughts win and subjectified me (OUCH!!). Every lie, promises and feelings were transparent. I don't get the point why someone whould lie about anything. " +
+            //     "<br><br>Main energy eh? Nice, but do not skips the storyline of all the side characters. From what I have know, you really enjoy losing people in life eh?. " +
+            //     "But for me I give fuck-all to my self respect if it means to win back others. " +
+            //     "But when it comes to someone disrespecting my friends and Sister? well that's where it ends. You fucked up. . Here, I feel it's better that I step back for your happiness? Yes." +
+            //     "<br><br>Remember, Rista todne mai aur insaan thodne mai farak hai. You cannot control what happes to you, but you can control how to respond to it. That's where our power lies." +
+            //     "I had really lovely messages before this to fix things (I wish you had seen that). lekin I know it's tough when you categorize the other in the bad ones." +
+            //     "Also know for a fact that not all men wants to enter your pants. As a man I know the trust factor for a women was in play, lekin don't make them feel that way." +
+            //     "I never left, the constant lack of effort questioned my thoughts." +
+            //     "<br><br>You are hard working and strong (107th reason why I loved you as a person). Ignore all this and work towards your goal." +
+            //     "You will win and I want you to win! love you." +
+            //     "<br><br>Personally I really want things to work out. Lekin the disrespect you showed blocking my sister is going to fucking pull me back. Apology to her" +
+            //     "<br><br>Maybe for one last time? How about you click the button..<br>." +
+            //     "</p>" +
+            //     "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
+            //     "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
+            //     "",
+            // footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
+            html:
+                "<h3 class='alertTitle'>Okay back?</h3>" +
+                "<p>I really want you to be happy. You were <strong>one</strong> of the person who left, when I needed someone but I now I get it. " +
+                "It's natural to feel weird about new experiences (like you stated). I am glad to be part of someone's chapter in life." +
+                "<br><br>I have nothing against you or anyone, stop with everything and enjoy the present. If you really want this that bad? you know how to fix it." +
+                " You know I am the 90s OG guy, I want to share experiences with people offline rather that this virtual shit. With you I tried, but you were like a virtual AI friend, " +
+                "who just refused to meet up. Again kyu? probably you never believed in me. No negative thoughts or emotions. You are one of the sweetest girl I had ever met. " +
+                "Lekin kya he kar sakte hain. Remember you are not the reason to anything, so don't think a lot. I feel distancing myself from you will help you. Mera kuch na kuch toh ho he jayega." +
+                "<br><br>My stupid brain lives without any expectations, I just skip the bad phases and go back to the original bond without any secondary thoughts. I would suggest you to do the same. " +
+                "Don't feel awakard about anything, if the other one is true, they'll just accept you and your decisons." +
+                "<br><br>Well I guess this is it from my end. Just in case I'm still unaccessed on whatsapp, here are few texts. Happy Diwali, Happy Birthday, Happy Christmas, Happy New Year and Happy Journey, followed by " +
+                "your chat becoming my personal shopping list." +
                 "</p>" +
-                "<div id=flip><div>knock knock!!</div><div>who's there?</div><div>Owl</div><div>Owl who?</div><div>Owl miss you.</div></div>" +
-                "<p id='beginKnock' onclick='newJokeLine()'>Click Here!!</p>" +
                 "",
-            footer: 'If not you,  please send an anonymous text at the footer to request a message change. Thank you!',
+                footer: "<h6>Song's too cliche, just knew you liked this characters so <a href='https://youtu.be/vyW82h6wloo' target='_blank'>Wanna here?</a> hehe",
             confirmButtonText: 'Okay',
             allowOutsideClick: false,
             showCancelButton: false,
