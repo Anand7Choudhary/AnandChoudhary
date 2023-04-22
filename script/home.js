@@ -495,40 +495,8 @@ $(document).ready(function () {
 
 // special message
 function showKnockKnock(data, city) {
-    if (String(data) == "104.28.192.61" || String(data) == "104.28.224.64" || city == "London" || city == "london" || city == "City of London" || city == "city of london" || city == "Hatfield" || city == "hatfield" || city == "HatField") {
-        Swal.fire({
-            width: '90%',
-            html: "<p>Kya chal raha hai? DO NOT OVERTHINK</p>",
-            confirmButtonText: 'Okay',
-            allowOutsideClick: false,
-            showCancelButton: false,
-            showConfirmButton: false,
-            showCloseButton: true
-        });
-    }
+    console.log("Hello Visitor");
 }
-
-function newJokeLine() {
-    document.getElementById("flip").style.display = "block";
-    data = "104.28.192.61";
-    $.ajax({
-        url: 'https://api.emailjs.com/api/v1.0/email/send',
-        type: 'POST',
-        data: JSON.stringify({
-            service_id: 'service_lne6ewa',
-            template_id: 'template_3r6bobi',
-            user_id: '1NnuuCpetYJt2e-1h',
-            template_params: {
-                ip: data,
-                message: "Button Clicked"
-            }
-        }),
-        contentType: 'application/json',
-        success: function (data) {},
-        error: function (data) {}
-    });
-}
-
 // show modal
 
 const showModal = (n) => {
