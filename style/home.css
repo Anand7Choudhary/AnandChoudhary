@@ -321,19 +321,32 @@ form .btn:hover::after {
 
 .mainBody .landingPage .landingPageTitle .buttons a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     background-color: #dbc500;
+    background-color: transparent;
+    border: 2px solid #dbc500;
     padding: 15px 25px;
     border-radius: 10px;
     font-size: 24px;
     box-shadow: 0px 0px 10px 3px rgb(0, 0, 0);
-    transition: all 0.25s ease-in-out;
+    transition: all 0.10s ease-in-out;
+}
+.mainBody .landingPage .landingPageTitle .buttons .articleBtn{
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0);
 }
 
 .mainBody .landingPage .landingPageTitle .buttons a:hover {
     transform: scale(0.9);
     background-color: #e5ce00;
+    color: #000000;
     box-shadow: 0px 0px 10px 3px rgb(37, 37, 37);
+}
+
+.mainBody .landingPage .landingPageTitle .buttons .articleBtn:hover {
+    background-image: linear-gradient(144deg, #8830c7, #3a24c5 50%, #00acb9);
+    color: #ffffff;
 }
 
 .mainBody .landingPage .landingPageDig {
@@ -848,6 +861,7 @@ form .btn:hover::after {
     justify-content: space-around;
     align-items: center;
     background-color: #030014;
+    background-color: #101010;
     position: relative;
     flex-direction: column;
     gap: 50px;
@@ -1054,7 +1068,7 @@ form .btn:hover::after {
     width: 100%;
     min-height: 100vh;
     max-height: fit-content;
-    background-color: #101010;
+    background-color: #030014;
     display: flex;
     justify-content: flex-start;
     align-items: center;
