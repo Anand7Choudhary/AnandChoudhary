@@ -1,0 +1,23 @@
+{
+  "name": "AnandChoudhary",
+  "version": "1.0.0",
+  "description": "hey there! This is a redesigned personal website for Anand Choudhary.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anand7Choudhary/AnandChoudhary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anand7Choudhary/AnandChoudhary/issues"
+  },
+  "homepage": "https://github.com/Anand7Choudhary/AnandChoudhary#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
