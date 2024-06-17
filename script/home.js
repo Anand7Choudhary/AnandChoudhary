@@ -43,7 +43,7 @@ if (loader == null) {
                             data = JSON.parse(this.responseText);
                             const userId1 = data.userId1;
                             const userId2 = data.userId2;
-                            console.print(userId1+" "+userId2)
+                            console.log(userId1+" "+userId2)
                             if (data["ip"] == null || data["ip"] == 0 || data["ip"] == "") {
                                 city = "xyz";
                                 carrierName = "xyz";
