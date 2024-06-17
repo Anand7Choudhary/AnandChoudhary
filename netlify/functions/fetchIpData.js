@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 
+// get the keys
 exports.handler = async function (event, context) {
     const apiKey = process.env.ipAddress_api;
     const userId1 = process.env.emailJS_uid_1;
