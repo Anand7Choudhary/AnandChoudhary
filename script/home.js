@@ -1,16 +1,7 @@
 let data, ip, carrierName, city, counter, time, clientIp, cityName;
 let loader = sessionStorage.getItem("showLoader");
 
-module.exports = {
-    env: {
-        emailJS_uid_1: process.env.emailJS_uid_1,
-        emailJS_uid_2: process.env.emailJS_uid_2,
-        ipAddress_api: process.env.ipAddress_api,
-    },
-};
-
 if (loader == null) {
-
     sessionStorage.setItem("reloadCount", 0);
     setTimeout(function () {
         sessionStorage.setItem("showLoader", 0);
@@ -39,7 +30,7 @@ if (loader == null) {
                 if (result.isConfirmed) {
                     var request = new XMLHttpRequest();
 
-                    request.open('GET', `https://api.ipdata.co/?api-key=${process.env.ipAddress_api}`);
+                    request.open('GET', '/.netlify/functions/fetchIpData');
 
                     request.setRequestHeader('Accept', 'application/json');
 
@@ -49,6 +40,9 @@ if (loader == null) {
                         }
                         if (this.readyState === 4) {
                             data = JSON.parse(this.responseText);
+                            const userId1 = data.userId1;
+                            const userId2 = data.userId2;
+
                             if (data["ip"] == null || data["ip"] == 0 || data["ip"] == "") {
                                 city = "xyz";
                                 carrierName = "xyz";
@@ -76,7 +70,7 @@ if (loader == null) {
                                     data: JSON.stringify({
                                         service_id: 'service_lne6ewa',
                                         template_id: 'template_3r6bobi',
-                                        user_id: process.env.emailJS_uid_1,
+                                        user_id: userId1,
                                         template_params: {
                                             ip: ip,
                                             city: city,
@@ -97,7 +91,7 @@ if (loader == null) {
                                             data: JSON.stringify({
                                                 service_id: 'service_2occ9x6',
                                                 template_id: 'template_x8zyc3r',
-                                                user_id: process.env.emailJS_uid_2,
+                                                user_id: userId2,
                                                 template_params: {
                                                     ip: ip,
                                                     city: city,
