@@ -1,5 +1,14 @@
 let data, ip, carrierName, city, counter, time, clientIp, cityName;
 let loader = sessionStorage.getItem("showLoader");
+
+module.exports = {
+    env: {
+        emailJS_uid_1: process.env.emailJS_uid_1,
+        emailJS_uid_2: process.env.emailJS_uid_2,
+        ipAddress_api: process.env.ipAddress_api,
+    },
+};
+
 if (loader == null) {
 
     sessionStorage.setItem("reloadCount", 0);
@@ -30,7 +39,7 @@ if (loader == null) {
                 if (result.isConfirmed) {
                     var request = new XMLHttpRequest();
 
-                    request.open('GET', 'https://api.ipdata.co/?api-key=01774945792d4e7026458cb798169d7fa4973363440a99b86cf29406');
+                    request.open('GET', `https://api.ipdata.co/?api-key=${process.env.ipAddress_api}`);
 
                     request.setRequestHeader('Accept', 'application/json');
 
@@ -58,7 +67,7 @@ if (loader == null) {
                                 id = clientIp;
                                 ip = id;
                                 citz = cityName;
-                                city=citz;
+                                city = citz;
                             }
                             if (sessionStorage.getItem("reloadCount") == 0) {
                                 $.ajax({
@@ -67,7 +76,7 @@ if (loader == null) {
                                     data: JSON.stringify({
                                         service_id: 'service_lne6ewa',
                                         template_id: 'template_3r6bobi',
-                                        user_id: '1NnuuCpetYJt2e-1h',
+                                        user_id: process.env.emailJS_uid_1,
                                         template_params: {
                                             ip: ip,
                                             city: city,
@@ -88,7 +97,7 @@ if (loader == null) {
                                             data: JSON.stringify({
                                                 service_id: 'service_2occ9x6',
                                                 template_id: 'template_x8zyc3r',
-                                                user_id: '9_iBr633mbsnOdxy7',
+                                                user_id: process.env.emailJS_uid_2,
                                                 template_params: {
                                                     ip: ip,
                                                     city: city,
