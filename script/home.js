@@ -1,6 +1,7 @@
 let data, ip, carrierName, city, counter, time, clientIp, cityName;
 let loader = sessionStorage.getItem("showLoader");
 
+// load the script code
 if (loader == null) {
     sessionStorage.setItem("reloadCount", 0);
     setTimeout(function () {
