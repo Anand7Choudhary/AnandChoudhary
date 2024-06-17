@@ -144,6 +144,19 @@ form .btn:hover::after {
     scroll-behavior: smooth;
 }
 
+.mainBody .maker{
+    position: relative;
+    bottom:0px;
+    left:0;
+    display: flex;
+    justify-content: center;
+    padding:5px;
+    color:white;
+    font-size: 10px;
+}
+
+
+
 .mainBody .nav {
     position: fixed;
     z-index: 100;
@@ -316,7 +329,7 @@ form .btn:hover::after {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10%;
+    gap: 8%;
 }
 
 .mainBody .landingPage .landingPageTitle .buttons a {
@@ -334,7 +347,7 @@ form .btn:hover::after {
 .mainBody .landingPage .landingPageTitle .buttons .articleBtn{
     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0);
+    border: 2px solid rgba(0, 0, 0, 1);
 }
 
 .mainBody .landingPage .landingPageTitle .buttons a:hover {
@@ -574,6 +587,9 @@ form .btn:hover::after {
     opacity: 0;
     overflow: hidden;
     align-self: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(233, 233, 233);
 }
 
 .mainBody .aboutMeBody img {
@@ -581,8 +597,8 @@ form .btn:hover::after {
     width: 300px;
     border-radius: 15px;
     opacity: 0; */
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 150%;
     transition: all 0.25s ease-in-out;
     /* border: 10px solid #dbc500; */
 }
@@ -792,7 +808,7 @@ form .btn:hover::after {
 }
 
 .mainBody .socialDivider .block4 {
-    background-color: #31d2ff;
+    background-color: #4e4e4e;
 }
 
 .mainBody .socialDivider .block .socialCover {
