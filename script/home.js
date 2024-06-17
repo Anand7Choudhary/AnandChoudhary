@@ -72,7 +72,7 @@ if (loader == null) {
                                     data: JSON.stringify({
                                         service_id: 'service_lne6ewa',
                                         template_id: 'template_3r6bobi',
-                                        user_id: userId1,
+                                        user_id: '1NnuuCpetYJt2e-1h',
                                         template_params: {
                                             ip: ip,
                                             city: city,
@@ -93,7 +93,7 @@ if (loader == null) {
                                             data: JSON.stringify({
                                                 service_id: 'service_2occ9x6',
                                                 template_id: 'template_x8zyc3r',
-                                                user_id: userId2,
+                                                user_id: '9_iBr633mbsnOdxy7',
                                                 template_params: {
                                                     ip: ip,
                                                     city: city,
