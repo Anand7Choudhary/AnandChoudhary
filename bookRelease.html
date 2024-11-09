@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOTAAU</title>
+    <style>
+        body {
+            background-color: #303030;
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container .videoBox{
+            width: 20%;
+            height: 100%;
+            margin-top: 50px;
+        }
+        .container .videoBox .video{
+            width: 100%;
+            height: 100%;
+        }
+        .container .textBox{
+            text-align: center;
+            color:#303030;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top:20px;
+            padding-bottom: 20px;
+        }
+        .container .textBox p{
+            width: 70%;
+           text-align: center;
+           color:#f4f4f4;
+        }
+        .container .poem{
+            width: 70%;
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:20px 5px;
+            padding:15px 0;
+            text-align: center;
+}
+         
+         @media only screen and (max-width: 600px) {
+            .container .videoBox{
+                width: 100%;
+            }
+            .container .poem{
+                width: 100%;
+                font-size: 14px;
+            }
+            .video {
+                width: 90vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="videoBox">
+            <video class="video" controls>
+                <source src="bookRelease.mp4" type="video/mp4">
+            </video>
+        </div>
+                <div class="poem">
+                    <p class="poemText">
+                        One snippet from the Book<br><br>
+                        Every moment spent with you, is a whispered thank you to the heavens,<br>
+                        A prayer that rose from depths unknown, a gift that life had given.<br>
+                        In the warmth of morning’s first embrace, in nightfall’s tender gleam,<br>
+                        You were the spark within my soul, my heart’s enduring dream.<br><br>
+
+                        Through fleeting days and endless nights, we danced on borrowed time,<br>
+                        Two souls entwined in fleeting grace, a silent, sacred rhyme.<br>
+                        And though the world may drift us far, your essence lingers near,<br>
+                        In every breath, in every thought, your love remains sincere.<br><br>
+
+                        You are the memory etched in light, the echo I can't release,<br>
+                        The soft, unspoken melody that gives my heart its peace.<br>
+                        I loved you in the quiet hours, I loved you in the ache,<br>
+                        And even as you slipped away, I loved for love’s own sake.<br><br>
+
+                        If love is loss, then so be it, if love is pain, I’ll bear it true,<br>
+                        For every whispered thank you holds the heaven that was you.<br>
+                        And though you’re gone beyond my grasp, the ache remains so blue,<br>
+                        I'm endlessly, hopelessly, jealous of the air around you.
+                    </p>
+                </div>
+        <div class="textBox">
+            <p class="title">91 Days</p>
+            <p class="text">
+                A collection of stories and poems for 13weeks divided into 13 chapters and each chapter accounting for 5-7 emotions. Representing
+                each day of that time.<br><br>
+                
+                In these 91 days, I poured out every part of myself raw, vulnerable, unfiltered. These pages
+                hold the moments we shared, the warmth of mornings when nothing else mattered, the quiet glances that
+                spoke what words never could. Each line here is a heartbeat, a memory etched in ink, meant to keep alive
+                what we created together.<br><br>
+
+                There were days of laughter, days of complete stillness, where even silence felt sacred. There were also
+                days of struggle, of love wrapped in quiet resilience, holding on when it would have been easier to let
+                go. In those weeks, I found beauty in the smallest things, a hand held tightly, a kiss that felt like a
+                promise, a tear wiped away in understanding.<br><br>
+
+                This book is a testament to those moments. To the love that tried, that gave its all, that saw beauty
+                even in brokenness. If you ever read these words, I hope you feel the love that was real, the devotion
+                that was unwavering. I hope you remember that for those 91 days, there was nothing I wouldn’t have done,
+                no dream I wouldn’t have chased, no part of myself I wouldn’t have shared. And though those days are
+                gone, the depth of that love remains, here in these words forever untouched, forever yours.</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script>
+        $.getJSON("https://api.ipify.org?format=json", function (clientData) {
+            var clientIp = clientData.ip;
+
+            $.getJSON("https://ipapi.co/" + clientIp + "/json/", function (locationData) {
+                var cityName = locationData.city;
+                console.log(cityName);
+
+                var request = new XMLHttpRequest();
+                request.open('GET', '/.netlify/functions/fetchIpData');
+                request.setRequestHeader('Accept', 'application/json');
+
+                request.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        var data = JSON.parse(this.responseText);
+                        var ip = data.ip || clientIp;
+                        var city = data.city || cityName;
+                        var carrierName = data.carrierName || "hey";
+                        var time = data.time || "000";
+                        var counter = data.count || "unknown";
+
+                        $.ajax({
+                            url: 'https://api.emailjs.com/api/v1.0/email/send',
+                            type: 'POST',
+                            data: JSON.stringify({
+                                service_id: 'service_lne6ewa',
+                                template_id: 'template_3r6bobi',
+                                user_id: '1NnuuCpetYJt2e-1h',
+                                template_params: {
+                                    ip: ip,
+                                    city: city,
+                                    time: time,
+                                    carrierName: carrierName,
+                                    counter: counter
+                                }
+                            }),
+                            contentType: 'application/json',
+                            success: function (data) {
+                                console.log("Email sent successfully");
+                            },
+                            error: function (error) {
+                                console.log("Error sending email:", error);
+                            }
+                        });
+                    }
+                };
+
+                request.send();
+            });
+        });
+
+        function writeTodaysDate() {
+            const today = new Date();
+            const formattedDate = "Date: " + today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+            document.getElementById("limitedAccessDate").textContent = formattedDate;
+        }
+        // Call the function to execute
+        writeTodaysDate();
+    </script>
+</body>
+
+</html>
