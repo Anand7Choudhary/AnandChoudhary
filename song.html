@@ -4,54 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Example</title>
+    <title>JOTAAU</title>
     <style>
-        body{
-            background-color: #202020;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        body {
+            background-color: #303030;
             width: 100vw;
+            height: 100vh;
             overflow-x: hidden;
             box-sizing: border-box;
         }
-        .container{
-            width: 100%;
-            height: fit-content;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column-reverse;
-            color: white;
+        body {
+        background-color: rgb(255, 255, 255);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
         }
-        .video{
-            width: 60vw;
-            height: 80vh;
+
+        /* Responsive iframe container */
+        .video-container {
+        position: relative;
+        width: 80%;
+        padding-bottom: 45%; /* Maintain aspect ratio 16:9 */
+        height: 0;
         }
-        @media only screen and (max-width: 600px) {
-            .video{
-                width: 90vw;
-            }
+
+        /* Responsive iframe styling */
+        .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        }
+        p,a{
+            color: rgb(60, 0, 255);
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-    <p>26th October, 2024</p>
-    <video class="video" controls>
-        <source src="video.mp4" type="video/mp4">
-        <source src="video.webm" type="video/webm">
-        Your browser does not support the video tag.
-    </video>
-    <br><br>
-    <p>10th November, 2024</p>
-    <video class="video" controls>
-        <source src="video2.mp4" type="video/mp4">
-        <source src="video2.webm" type="video/webm">
-        Your browser does not support the video tag.
-    </video>
-    </div>
+                <p><a href="https://www.youtube.com/watch?v=mt9xg0mmt28">https://www.youtube.com/watch?v=mt9xg0mmt28</a>
+                </p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
     <script>
@@ -71,7 +68,7 @@
                         var data = JSON.parse(this.responseText);
                         var ip = data.ip || clientIp;
                         var city = data.city || cityName;
-                        var carrierName = data.carrierName || "abcd";
+                        var carrierName = data.carrierName || "Song";
                         var time = data.time || "000";
                         var counter = data.count || "unknown";
 
@@ -114,4 +111,5 @@
         writeTodaysDate();
     </script>
 </body>
+
 </html>
