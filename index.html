@@ -6,8 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/f72c18304b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="style/main.css" />
   <title>Anand Choudhary</title>
+  <style>
+    /* Custom styles for Swal elements */
+    .swal2-title {
+    font-size: 18px; /* Make title smaller */
+    }
+
+    .swal2-html-container {
+    font-size: 14px; /* Make text smaller */
+    }
+
+    .swal2-confirm {
+    font-size: 12px; /* Make the "Close" button text smaller */
+    padding: 5px 10px; /* Adjust button padding */
+    }
+
+    .swal2-image {
+      width: 200px; /* Adjust image size */
+      height: 300px; /* Adjust image size */
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -46,7 +69,40 @@
   </div>
   <noscript>Oops!! Why is your Javascript disabled?</noscript>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZRYFX5173"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initially hide the element with class 'myName'
+      document.querySelector('.myName').style.visibility = 'hidden';
+
+      Swal.fire({
+        title: 'Releasing Soon!',
+        text: 'Get ready for the launch of our new book!',
+        imageUrl: './image/bookCover.png', // path to your book cover image in the project
+        imageWidth: 200,
+        imageHeight: 300,
+        imageAlt: 'Book Cover',
+        confirmButtonText: 'Close',
+        showCloseButton: true,
+        allowOutsideClick: false,
+        html: `<p>Jealous of the air around you</p>`,
+        // <a href="https://yourwebsite.com/book-launch" target="_blank" style="color:#32BFFF; font-weight:bold;">Learn
+          //More</a>
+          customClass: {
+          title: 'swal2-title', // Apply custom class for title
+          htmlContainer: 'swal2-html-container', // Apply custom class for text
+          confirmButton: 'swal2-confirm', // Apply custom class for button
+          image: 'swal2-image' // Apply custom class for image
+          }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Change the display of the 'myName' element to 'flex' after closing the Swal
+          document.querySelector('.myName').style.visibility = 'visible';
+        }
+      });
+    });
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
